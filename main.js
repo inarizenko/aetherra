@@ -13,7 +13,8 @@ $(function(){
     // Click handler for the fake links
   $('aside b[data-href]').on('click', function() {
     const href = $(this).data('href');
-
+    $(this).addClass('active');
+    $(this).parents('aside').find('b.active').not(this).removeClass('active');
     // Optional: show loading state
     $('main').html('<p>Cargando...</p>');
 
@@ -31,6 +32,7 @@ $(function(){
     $.get(path, function(data) {
       const newContent = $(data).find('main').html();
       $('main').html(newContent);
+      $('aside b.active').removeClass('active');
     });
   };
 });
