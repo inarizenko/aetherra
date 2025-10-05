@@ -56,6 +56,17 @@ $(function(){
       $('body').removeAttr('data-section');
     });
   };
+
+$('b[data-tab]').on('click', function(){
+var tab = $(this).data('tab');
+$(this).parents('body').find('*:not(b)[data-tab="'+tab+'"]').fadeIn();
+$(this).parents('body').find('*:not(b)[data-tab]:not([data-tab="'+tab+'"])').fadeOut();
+});
+
+$('*:not(b)[data-tab] .close').on('click', function(){
+$(this).parents('[data-tab]').fadeOut();
+});
+
 });
 
 $(window).on('load',function(){
