@@ -1,6 +1,6 @@
 const actualVersion = 'Beta 0.1';
 const credits = 'Headers por <a href="https://www.artstation.com/artwork/2Bedwx">Nikolai Belokobylski</a>, <a href="https://www.artstation.com/artwork/0lWJPK">Mooncolony</a>, <a href="https://www.artstation.com/artwork/WmAx82">Erick Choy</a>, <a href="https://www.artstation.com/artwork/aonybJ">Elliot Bocxtaele</a>.';
-const leftMenuManual = '<aside><h>Lore</h><ul><li><b data-href="/aetherra/manual/history.html">Historia</b></li><li><b data-href="/aetherra/manual/religion.html">Religión</b></li></aside>';
+const leftMenuManual = '<aside><h>Lore</h><ul><li><b data-href="/aetherra/manual/history.html">Historia</b></li><li><b data-href="/aetherra/manual/religion.html">Religión</b></li></ul><h>Ayuda</h><ul><li><b data-href="/aetherra/manual/glossary.html">Glosario</b></li></ul></aside>';
 
 $(function(){
   var header = '<header><h1>Aetherra</h1></header>';
