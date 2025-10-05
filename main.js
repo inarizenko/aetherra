@@ -7,9 +7,22 @@ $(function(){
   if (window.location.pathname.indexOf('/manual') !== -1) {
     $('body').addClass('manual');
     header = '<header><h1>Manual del Jugador</h1></header>';
+    if (window.location.pathname.indexOf('#') !== -1) {
+      var hashtag = window.location.pathname.split('#')[1].toLowerCase();
+    }
   }
   $('body').prepend('<nav><a href="/aetherra/index.html">Aetherra</a><span>'+navLinks+'</span></nav>'+header);
   $('body.manual').prepend(leftMenuManual);
+  if ($('body.manual aside').find('a[data-href="'+hashtag+'.html"]').length) {
+    var self = $('body.manual aside').find('a[data-href="'+hashtag+'.html"]');
+    $(self).addClass('active');
+    $(self).parents('aside').find('b.active').not(this).removeClass('active');
+    $.get(href, function(data) {
+      $('main').html(data);
+    }).fail(function() {
+      $('main').html('<p>No se pudo cargar la página.</p>');
+    });
+  }
     // Click handler for the fake links
   $('aside b[data-href]').on('click', function() {
     const href = $(this).data('href');
