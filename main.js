@@ -9,7 +9,6 @@ $(function(){
     header = '<header><h1>Manual del Jugador</h1></header>';
     if (window.location.href.indexOf('#') !== -1) {
       var hashtag = window.location.href.split('#')[1].toLowerCase();
-      console.log(hashtag);
     }
   }
   $('body').prepend('<nav><a href="/aetherra/index.html">Aetherra</a><span>'+navLinks+'</span></nav>'+header);
@@ -19,7 +18,7 @@ $(function(){
     var href = $(self).data('href');
     var section = href.split('/manual/')[1].split('.html')[0];
     $(self).addClass('active');
-    $(self).parents('aside').find('b.active').not(this).removeClass('active');
+    $(self).parents('aside').find('b.active').not(self).removeClass('active');
     $('body').attr('section', section);
     $.get(href, function(data) {
       $('main').html(data);
