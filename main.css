@@ -510,3 +510,92 @@ body.manual {
     --header-filter:brightness(1.3) saturate(80%);
   }
 }
+
+*:not(b)[data-tab] {
+  position:fixed;
+  inset:0;
+  margin:auto;
+  z-index:999;
+  background:var(--fondo);
+  width:clamp(15rem, 80dvw, 70rem);
+  height:clamp(10rem, 60dvh, 40rem);
+  overflow:hidden;
+  box-sizing:border-box;
+  box-shadow:0 0 0 100dvmax color-mix(in srgb, var(--body) 95%, transparent);
+}
+
+species {
+  padding:calc(var(--padding) * 2);
+  gap:var(--padding);
+  display:grid;
+  grid-template-columns:100%;
+  grid-template-rows:max-content 1fr;
+  & h {
+    font:700 var(--fs-h4) var(--f-titles);
+    line-height:1em;
+    color:var(--subtitle);
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    text-transform:uppercase;
+    & .close {
+      margin-left:auto;
+      font:var(--fset-mono2);
+      color:var(--accent1);
+      cursor:pointer;
+      &:hover {
+        color:var(--accent1);
+      }
+    }
+  }
+  & > div {
+    align-items:stretch;
+    overflow:hidden;
+    gap:var(--padding);
+    & > img {
+      width:clamp(5rem, 30%, 20rem);
+      height:100%;
+      object-fit:contain;
+      object-position:center;
+      flex-shrink:0;
+    }
+    & .tabs-body {
+      flex:1;
+      align-items:stretch;
+      align-self:stretch;
+      & .tabs {
+        & > b {
+          cursor:pointer;
+          background:color-mix(in srgb, var(--fondo) 98%, white);
+          flex:1;
+          font:var(--fset-mono3);
+          line-height:1em;
+          text-transform:uppercase;
+          text-align:center;
+          padding:1.25em;
+          align-self:stretch;
+          place-content:center;
+          &.active, &:hover {
+            background:color-mix(in srgb, var(--fondo) 96%, white);
+          }
+        }
+      }
+      & .tabbed {
+        flex:1;
+        padding:var(--padding);
+        padding-right:calc(var(--padding) / 2);
+        overflow:hidden;
+        background:color-mix(in srgb, var(--fondo) 99%, white);
+        position:relative;
+        & > div {
+          position:absolute;
+          inset:var(--padding);
+          right:calc(var(--padding) / 2);
+          padding-right:calc(var(--padding) / 2);
+          overflow:auto;
+          text-align:justify;
+        }
+      }
+    }
+  }
+}
