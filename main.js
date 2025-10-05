@@ -14,9 +14,12 @@ $(function(){
   $('body').prepend('<nav><a href="/aetherra/index.html">Aetherra</a><span>'+navLinks+'</span></nav>'+header);
   $('body.manual').prepend(leftMenuManual);
   if ($('body.manual aside').find('a[data-href="'+hashtag+'.html"]').length) {
-    var self = $('body.manual aside').find('a[data-href="'+hashtag+'.html"]');
+    var self = $('body.manual aside').find('a[data-href$="/'+hashtag+'.html"]');
+    var href = $(self).data('href');
+    var section = href.split('.html')[0];
     $(self).addClass('active');
     $(self).parents('aside').find('b.active').not(this).removeClass('active');
+    $('body').attr('section', section);
     $.get(href, function(data) {
       $('main').html(data);
     }).fail(function() {
@@ -25,9 +28,11 @@ $(function(){
   }
     // Click handler for the fake links
   $('aside b[data-href]').on('click', function() {
-    const href = $(this).data('href');
+    var href = $(this).data('href');
+    var section = href.split('.html')[0];
     $(this).addClass('active');
     $(this).parents('aside').find('b.active').not(this).removeClass('active');
+    $('body').attr('section', section);
     // Optional: show loading state
     $('main').html('<p>Cargando...</p>');
 
@@ -41,9 +46,9 @@ $(function(){
 
   // Handle back/forward browser buttons
   window.onpopstate = function() {
-    const path = window.location.pathname;
+    var path = window.location.pathname;
     $.get(path, function(data) {
-      const newContent = $(data).find('main').html();
+      var newContent = $(data).find('main').html();
       $('main').html(newContent);
       $('aside b.active').removeClass('active');
     });
