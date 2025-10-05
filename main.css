@@ -77,6 +77,9 @@ color-scheme:dark;
 --nav-h:3rem;
 --nav-links1:#333;
 --nav-links2:#000;
+/*Side*/
+--side:#0a0a0a;
+--side-w:clamp(10rem, 20dvw, 20rem);
 /*Fondos*/
 --body: #111;
 --body-img: none;
@@ -352,4 +355,22 @@ header {
 main {
   width:clamp(20rem, 70dvw, 120rem);
   margin:calc(var(--margin) * 2) auto;
+}
+
+/* SIDE */
+
+aside {
+  position:fixed;
+  inset:0;
+  top:var(--nav-h);
+  z-index:998;
+  background:var(--side);
+  width:var(--side-w);
+}
+
+body:has(aside) {
+  padding-left:var(--side-w)!important;
+  & > nav {
+    margin-left:calc(var(--side-w) * -1);
+  }
 }
