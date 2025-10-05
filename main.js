@@ -9,14 +9,15 @@ $(function(){
     header = '<header><h1>Manual del Jugador</h1></header>';
     if (window.location.href.indexOf('#') !== -1) {
       var hashtag = window.location.href.split('#')[1].toLowerCase();
+      console.log(hashtag);
     }
   }
   $('body').prepend('<nav><a href="/aetherra/index.html">Aetherra</a><span>'+navLinks+'</span></nav>'+header);
   $('body.manual').prepend(leftMenuManual);
-  if ($('body.manual aside').find('a[data-href="'+hashtag+'.html"]').length) {
+  if ($('body.manual aside').find('a[data-href$="/'+hashtag+'.html"]').length) {
     var self = $('body.manual aside').find('a[data-href$="/'+hashtag+'.html"]');
     var href = $(self).data('href');
-    var section = href.split('.html')[0];
+    var section = href.split('/manual/')[1].split('.html')[0];
     $(self).addClass('active');
     $(self).parents('aside').find('b.active').not(this).removeClass('active');
     $('body').attr('section', section);
@@ -29,7 +30,7 @@ $(function(){
     // Click handler for the fake links
   $('aside b[data-href]').on('click', function() {
     var href = $(this).data('href');
-    var section = href.split('.html')[0];
+    var section = href.split('/manual/')[1].split('.html')[0];
     $(this).addClass('active');
     $(this).parents('aside').find('b.active').not(this).removeClass('active');
     $('body').attr('section', section);
