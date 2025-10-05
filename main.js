@@ -7,8 +7,8 @@ $(function(){
   if (window.location.pathname.indexOf('/manual') !== -1) {
     $('body').addClass('manual');
     header = '<header><h1>Manual del Jugador</h1></header>';
-    if (window.location.pathname.indexOf('#') !== -1) {
-      var hashtag = window.location.pathname.split('#')[1].toLowerCase();
+    if (window.location.href.indexOf('#') !== -1) {
+      var hashtag = window.location.href.split('#')[1].toLowerCase();
     }
   }
   $('body').prepend('<nav><a href="/aetherra/index.html">Aetherra</a><span>'+navLinks+'</span></nav>'+header);
