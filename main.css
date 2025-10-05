@@ -620,6 +620,7 @@ ul.species-list {
     display:block;
   }
   & li {
+    cursor:pointer;
     width:20%;
     min-width:10rem;
     max-width:20rem;
@@ -657,13 +658,8 @@ ul.species-list {
       font:700 var(--fs-h6) var(--f-titles);
       text-align:center;
       place-content:center;
-      cursor:pointer;
       text-wrap:balance;
       color:var(--subtitle);
-      transition:ease .3s;
-      &:hover {
-        color:var(--title);
-      }
     }
     & > span {
       grid-area:data;
