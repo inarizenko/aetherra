@@ -9,7 +9,7 @@ color-scheme:dark;
 --links1: #bbb;
 --links2: #ddd;
 /*Fondos opacos*/
---fondo: #0f0f0f;
+--fondo: #141414;
 /*Tamaño de fuentes*/
 --fs-h0: 11rem;
 --fs-h1: 5rem;
@@ -54,12 +54,12 @@ color-scheme:dark;
 --tt-mono:uppercase;
 --tt-deco:none;
 /*Colores de fuente*/
---text:#777;
---text2: #555;
---text3: #333;
---subtitle:#bbb;
---title:#efefef;
---subtitle-img: #ddd;
+--text:#8f8f8f;
+--text2: #666;
+--text3: #555;
+--subtitle:#ccc;
+--title:#fafafa;
+--subtitle-img: #ccc;
 --title-img: #fafafa;
 --selection-txt: black;
 /*Scroll: body / resto de cajas*/
@@ -81,7 +81,7 @@ color-scheme:dark;
 --side:#0a0a0a;
 --side-w:clamp(10rem, 20dvw, 20rem);
 /*Fondos*/
---body: #111;
+--body: #0f0f0f;
 --body-img: none;
 --body-blend: multiply;
 --header: #777;
@@ -101,7 +101,7 @@ scrollbar-color:var(--scroll-thumb) var(--scroll-bckg);
 margin: 0;
 padding: 0;
 min-height: 100%;
-font:16px var(--f-body);
+font:14px var(--f-body);
 @media (prefers-reduced-motion: no-preference) {
 scroll-behavior: smooth;
 }
