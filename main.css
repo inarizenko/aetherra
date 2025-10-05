@@ -353,8 +353,87 @@ header {
 /* MAIN */
 
 main {
-  width:clamp(20rem, 70dvw, 120rem);
-  margin:calc(var(--margin) * 2) auto;
+  width: clamp(20rem, 70dvw, 120rem);
+  margin: calc(var(--margin) * 2) auto;
+  background:var(--fondo);
+  padding:calc(var(--padding) * 2);
+  text-align:justify;
+  & h2 {
+    font:var(--fs-h3) var(--f-deco);
+    line-height:1em;
+    margin:0 0 .25em;
+    color:var(--title);
+    text-transform:var(--tt-deco);
+    &:not(:first-child) {
+      margin-top:.75em;
+    }
+  }
+  & h3 {
+    font:700 var(--fs-h4) var(--f-titles);
+    line-height:1em;
+    margin:0 0 .25em;
+    color:var(--title);
+    text-transform:var(--tt-titles-big);
+    &:not(:first-child) {
+      margin-top:.75em;
+    }
+  }
+  & h4 {
+    font:700 var(--fs-h5) var(--f-titles);
+    line-height:1em;
+    margin:0 0 .25em;
+    color:var(--title);
+    text-transform:var(--tt-titles-small);
+    &:not(:first-child) {
+      margin-top:.75em;
+    }
+  }
+  & h5 {
+    font:700 var(--fs-h6) var(--f-titles);
+    line-height:1em;
+    margin:0 0 .25em;
+    color:var(--accent1);
+    text-transform:var(--tt-titles-small);
+    &:not(:first-child) {
+      margin-top:.75em;
+    }
+  }
+  & h6 {
+    font:400 var(--fs-h7) var(--f-titles);
+    line-height:1em;
+    margin:0 0 .25em;
+    color:var(--title);
+    text-transform:var(--tt-titles-big);
+    border-bottom:1px solid var(--accent2);
+    width:fit-content;
+    padding-bottom:.1em;
+    &:not(:first-child) {
+      margin-top:.75em;
+    }
+  }
+  & li {
+    list-style-type:square;
+    & > b {
+      color:var(--subtitle);
+      text-transform:uppercase;
+      font-weight:900;
+      font-size:.95rem;
+    }
+  }
+  & *::marker {
+    color:var(--accent2);
+  }
+  & :where(strong, b, a) {
+    color:var(--accent1);
+  }
+  & :where(em, i, u) {
+    text-decoration-color:var(--accent1);
+    color:var(--subtitle);
+  }
+  & strike {
+    text-decoration-color:var(--accent2);
+    color:var(--text2);
+  }
 }
 
 /* SIDE + MANUAL */
