@@ -31,6 +31,7 @@ $(function(){
   $('aside b[data-href]').on('click', function() {
     var href = $(this).data('href');
     var section = href.split('/manual/')[1].split('.html')[0];
+    location.hash = section;
     $(this).addClass('active');
     $(this).parents('aside').find('b.active').not(this).removeClass('active');
     $('body').attr('section', section);
