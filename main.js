@@ -51,6 +51,7 @@ $(function(){
       var newContent = $(data).find('main').html();
       $('main').html(newContent);
       $('aside b.active').removeClass('active');
+      $('body').removeAttr('data-section');
     });
   };
 });
