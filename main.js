@@ -3,11 +3,12 @@ const leftMenuManual = '<aside><h>Lore</h><ul><li><b data-href="/aetherra/manual
 
 $(function(){
   var header = '<header><h1>Aetherra</h1></header>';
+  var navLinks = '<a href="/aetherra/manual/">Manual</a><a href="/aetherra/about.html">Acerca de Aetherra</a><a href="/aetherra/credits.html">Créditos</a>';
   if (window.location.pathname.indexOf('/manual') !== -1) {
     $('body').addClass('manual');
     header = '<header><h1>Manual del Jugador</h1></header>';
   }
-  $('body').prepend('<nav><a href="/aetherra/index.html">Aetherra</a><span><a href="/aetherra/manual/">Manual</a><a href="/aetherra/about.html">Acerca de Aetherra</a><a href="/aetherra/credits.html">Créditos</a></span></nav>'+header);
+  $('body').prepend('<nav><a href="/aetherra/index.html">Aetherra</a><span>'+navLinks+'</span></nav>'+header);
   $('body.manual').prepend(leftMenuManual);
     // Click handler for the fake links
   $('aside b[data-href]').on('click', function() {
