@@ -57,7 +57,13 @@ $(function(){
     });
   };
 
+});
+
+$(window).on('load',function(){
+
 $('*:not(b)[data-tab]').hide();
+  
+  $('html').addClass('loaded');
 
 $('b[data-tab]').on('click', function(){
 var tab = $(this).data('tab');
@@ -68,9 +74,5 @@ $(this).parents('body').find('*:not(b)[data-tab]:not([data-tab="'+tab+'"])').fad
 $('*:not(b)[data-tab] .close').on('click', function(){
 $(this).parents('[data-tab]').fadeOut();
 });
-
-});
-
-$(window).on('load',function(){
-  $('html').addClass('loaded');
+  
 });
