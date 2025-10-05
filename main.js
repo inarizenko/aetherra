@@ -74,8 +74,8 @@ $('.tabs>b:first-of-type').addClass('active');
   
     $('html').addClass('loaded');
 
-$('b[data-tab]').on('click', function(){
-var tab = $(this).data('tab');
+$('.species-list li').on('click', function(){
+var tab = $(this).find('>b[data-tab').data('tab');
 $(this).parents('body').find('*:not(b)[data-tab="'+tab+'"]').fadeIn();
 $(this).parents('body').find('*:not(b)[data-tab]:not([data-tab="'+tab+'"])').fadeOut();
 });
