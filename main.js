@@ -62,8 +62,17 @@ $(function(){
 $(window).on('load',function(){
 
 $('*:not(b)[data-tab]').hide();
+
+$('.tabbed>.section').each(function(){
+var title = $(this).data('title');
+$(this).parent('.tabbed').parent('.tabs-body').find('>.tabs').append('<b data-tabbed="'+title+'">'+title+'</div>');
+$(this).hide();
+});
+
+$('.tabbed>.section:first-of-type').show();
+$('.tabs>b:first-of-type').addClass('active');
   
-  $('html').addClass('loaded');
+    $('html').addClass('loaded');
 
 $('b[data-tab]').on('click', function(){
 var tab = $(this).data('tab');
@@ -73,6 +82,14 @@ $(this).parents('body').find('*:not(b)[data-tab]:not([data-tab="'+tab+'"])').fad
 
 $('*:not(b)[data-tab] .close').on('click', function(){
 $(this).parents('[data-tab]').fadeOut();
+});
+
+$('.tabs>b').on('click', function(){
+var title = $(this).data('tabbed');
+$(this).addClass('active');
+$(this).siblings().removeClass('active');
+$(this).parent('.tabs').parent('.tabs-body').find('>.tabbed>.section[data-title="'+title+'"]').slideDown();
+$(this).parent('.tabs').parent('.tabs-body').find('>.tabbed>.section:not([data-title="'+title+'"])').slideUp();
 });
   
 });
