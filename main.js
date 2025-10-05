@@ -57,6 +57,8 @@ $(function(){
     });
   };
 
+$('*:not(b)[data-tab]').hide();
+
 $('b[data-tab]').on('click', function(){
 var tab = $(this).data('tab');
 $(this).parents('body').find('*:not(b)[data-tab="'+tab+'"]').fadeIn();
