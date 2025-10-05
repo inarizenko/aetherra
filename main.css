@@ -465,6 +465,10 @@ aside {
       font:var(--fset-mono3);
       line-height:1em;
       text-transform:var(--tt-mono);
+      & ul {
+        padding-left:1em;
+        padding-top:.5em;
+      }
       &:not(:last-of-type) {
         margin-bottom:.75em;
       }
