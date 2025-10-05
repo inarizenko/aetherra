@@ -508,11 +508,11 @@ body.manual {
       font-size:7rem;
     }
   }
-  body.manual[section="religion"] {
+  &[section="religion"] {
     --header-img:url(https://i.imgur.com/Y6ajFWn.jpeg);
     --header-position:center 60%;
     }
-  body.manual[section="history"] {
+  &[section="history"] {
     --header-img:url(https://cdnb.artstation.com/p/assets/images/images/074/857/005/4k/elliot-bocxtaele-act4-loadingscreen04.jpg?1713164327);
     --header-position:center 30%;
     --header-filter:brightness(1.3) saturate(80%);
