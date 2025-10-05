@@ -121,7 +121,7 @@ background-position: center;
 background-attachment: fixed;
 background-repeat: no-repeat;
 color: var(--text);
-padding:0 0 var(--navbot-h)!important;
+padding:var(--nav-h) 0 0!important;
 opacity:1;
 transition:all ease 1s;
 }
@@ -275,20 +275,15 @@ line-height: 1em;
 color: var(--subtitle);
 }
 
-/* CUERPO */
-
-body {
-  height:200dvh;
-}
-
 /* NAV */
 
 nav {
   --links1:var(--nav-links1);
   --links2:var(--nav-links2);
   background:var(--nav);
-  position:sticky;
-  top:0;
+  position:fixed;
+  inset:0;
+  bottom:unset;
   height:var(--nav-h);
   display:flex;
   justify-content:space-between;
@@ -494,9 +489,6 @@ aside {
 
 body:has(aside) {
   padding-left:var(--side-w)!important;
-  & > nav {
-    margin-left:calc(var(--side-w) * -1);
-  }
 }
 
 body.manual {
