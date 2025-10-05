@@ -366,6 +366,51 @@ aside {
   z-index:998;
   background:var(--side);
   width:var(--side-w);
+  box-sizing:border-box;
+  border:var(--padding) solid transparent;
+  border-right-width:calc(var(--padding) / 2);
+  padding-right:calc(var(--padding) / 2);
+  display:grid;
+  grid-template-columns:100%;
+  place-content:flex-start;
+  overflow:auto;
+  & > h {
+    font:900 var(--fset-titles4);
+    color:var(--subtitle);
+    text-transform:var(--tt-titles-small);
+    border-bottom:1px solid var(--accent2);
+    line-height:1em;
+    width:fit-content;
+    padding-right:1em;
+    padding-bottom:.1em;
+  }
+  & ul {
+    list-style-type:square;
+    & li {
+      color:var(--links1);
+      font:var(--fset-mono3);
+      line-height:1em;
+      text-transform:var(--tt-mono);
+      &:not(:last-of-type) {
+        margin-bottom:.75em;
+      }
+      &::marker {
+        color:var(--accent2);
+        transition:ease .3s;
+      }
+      &:hover::marker, &:has(:hover, .active)::marker {
+        color:var(--accent1);
+      }
+      & b[data-href] {
+        color:var(--links1);
+        transition:ease .3s;
+        cursor:pointer;
+        &:hover, &.active {
+          color:var(--links2);
+        }
+      }
+    }
+  }
 }
 
 body:has(aside) {
