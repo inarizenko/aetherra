@@ -560,7 +560,7 @@ species {
   & > div {
     align-items:stretch;
     overflow:hidden;
-    gap:var(--padding);
+    gap:calc(var(--padding) * 2);
     & > img {
       width:clamp(5rem, 30%, 20rem);
       height:100%;
