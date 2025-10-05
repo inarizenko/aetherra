@@ -584,6 +584,7 @@ species {
         flex:1;
         overflow:hidden;
         position:relative;
+        background:color-mix(in srgb, var(--fondo) 99%, white);
         & > div {
           background:color-mix(in srgb, var(--fondo) 99%, white);
           position:absolute;
