@@ -7,6 +7,33 @@ $(function(){
     $('body').addClass('manual');
   }
   $('body.manual').prepend(leftMenuManual);
+    // Click handler for the fake links
+  $('aside b[data-href]').on('click', function() {
+    const href = $(this).data('href');
+
+    // Optional: show loading state
+    $('main').html('<p>Cargando...</p>');
+
+    // Load the new content via AJAX
+    $.get(href, function(data) {
+      // Extract the <main> content from the loaded page
+      const newContent = $(data).html();
+
+      // Replace current main content
+      $('main').html(newContent);
+    }).fail(function() {
+      $('main').html('<p>No se pudo cargar la página.</p>');
+    });
+  });
+
+  // Handle back/forward browser buttons
+  window.onpopstate = function() {
+    const path = window.location.pathname;
+    $.get(path, function(data) {
+      const newContent = $(data).find('main').html();
+      $('main').html(newContent);
+    });
+  };
 });
 
 $(window).on('load',function(){
