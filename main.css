@@ -605,6 +605,12 @@ species {
           text-align:justify;
           scrollbar-width:var(--scroll-size);
           scrollbar-color:color-mix(in srgb, var(--fondo) 90%, white) color-mix(in srgb, var(--fondo) 99%, white);
+          & ul {
+            padding-left: 2em;
+            &:first-of-type {
+              margin-top:0;
+            }
+          }
         }
       }
     }
