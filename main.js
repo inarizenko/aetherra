@@ -16,11 +16,7 @@ $(function(){
 
     // Load the new content via AJAX
     $.get(href, function(data) {
-      // Extract the <main> content from the loaded page
-      const newContent = $(data).html();
-
-      // Replace current main content
-      $('main').html(newContent);
+      $('main').html(data);
     }).fail(function() {
       $('main').html('<p>No se pudo cargar la página.</p>');
     });
