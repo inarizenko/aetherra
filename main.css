@@ -603,6 +603,8 @@ species {
           padding-right:calc(var(--padding) / 2);
           overflow:auto;
           text-align:justify;
+          scrollbar-width:var(--scroll-size);
+          scrollbar-color:color-mix(in srgb, var(--fondo) 90%, white) color-mix(in srgb, var(--fondo) 99%, white);
         }
       }
     }
