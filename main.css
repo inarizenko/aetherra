@@ -103,7 +103,7 @@ font:16px var(--f-body);
 scroll-behavior: smooth;
 }
 }
-html.unloaded {
+html:not(.loaded) {
   background:black;
   & body {
     opacity:0;
@@ -335,7 +335,8 @@ header {
   & h1 {
     margin:0;
     color:var(--title-img);
-    font:var(--fs-h1) var(--f-deco);
+    font: 9rem var(--f-deco);
+    text-shadow: 0 0 5px black, 0 0 15px black, 0 0 35px black;
   }
   &::before {
     content:'';
