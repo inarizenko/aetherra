@@ -599,3 +599,98 @@ species {
     }
   }
 }
+
+ul.species-list {
+  display:flex;
+  place-content:flex-start;
+  justify-content:center;
+  align-items:stretch;
+  flex-wrap:wrap;
+  gap:var(--gap);
+  padding:0;
+  margin:var(--gap) auto calc(var(--padding) * 2);
+  h3:has(+&), h3:has(+small+&) {
+    text-align:center;
+    font-size:var(--fs-h3);
+    font-weight:400;
+    text-transform:var(--tt-mono);
+  }
+  small:has(+&) {
+    text-align:center;
+    display:block;
+  }
+  & li {
+    width:20%;
+    min-width:10rem;
+    max-width:20rem;
+    flex-grow:1;
+    display:grid;
+    grid-template-columns:100%;
+    grid-template-rows:9.2rem 8rem 1fr max-content;
+    grid-template-areas:
+      'image'
+      'title'
+      'space'
+      'data';
+    background:color-mix(in srgb, var(--fondo) 99%, white);
+    height:20rem;
+    &:has(>i) {
+      grid-template-rows:9.2rem 1fr max-content max-content 1fr max-content;
+      grid-template-areas:
+        'image'
+        'space'
+        'title'
+        'desc'
+        'space2'
+        'data';
+      height:23rem;
+    }
+    & > img {
+      grid-area:image;
+      height:100%;
+      width:100%;
+      object-fit:cover;
+      object-position:center;
+    }
+    & > b {
+      grid-area:title;
+      font:700 var(--fs-h6) var(--f-titles);
+      text-align:center;
+      place-content:center;
+      cursor:pointer;
+      text-wrap:balance;
+      color:var(--subtitle);
+      transition:ease .3s;
+      &:hover {
+        color:var(--title);
+      }
+    }
+    & > span {
+      grid-area:data;
+      padding:var(--gap);
+      gap:var(--gap);
+      padding-top:0;
+      display:flex;
+      align-items:stretch;
+      justify-content:center;
+      & > b {
+        background:color-mix(in srgb, var(--fondo) 98%, white);
+        flex-grow:1;
+        padding:1em;
+        font:var(--fset-mono6);
+        line-height:1em;
+        text-transform:var(--tt-mono);
+        text-align:center;
+      }
+    }
+    & > i {
+      grid-area:desc;
+      color:var(--text);
+      font:var(--fset-body3);
+      text-align:center;
+      place-content:center;
+      cursor:pointer;
+      text-wrap:balance;
+    }
+  }
+}
