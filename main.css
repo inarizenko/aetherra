@@ -357,7 +357,7 @@ main {
   margin:calc(var(--margin) * 2) auto;
 }
 
-/* SIDE */
+/* SIDE + MANUAL */
 
 aside {
   position:fixed;
@@ -372,5 +372,14 @@ body:has(aside) {
   padding-left:var(--side-w)!important;
   & > nav {
     margin-left:calc(var(--side-w) * -1);
+  }
+}
+
+body.manual {
+  & header {
+    height:clamp(15rem, 50dvh, 30rem);
+    & h1 {
+      font-size:7rem;
+    }
   }
 }
