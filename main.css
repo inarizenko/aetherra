@@ -582,15 +582,14 @@ species {
       }
       & .tabbed {
         flex:1;
-        padding:var(--padding);
-        padding-right:calc(var(--padding) / 2);
         overflow:hidden;
-        background:color-mix(in srgb, var(--fondo) 99%, white);
         position:relative;
         & > div {
+          background:color-mix(in srgb, var(--fondo) 99%, white);
           position:absolute;
-          inset:var(--padding);
-          right:calc(var(--padding) / 2);
+          inset:0;
+          border:var(--padding) solid transparent;
+          border-right-width:calc(var(--padding) / 2);
           padding-right:calc(var(--padding) / 2);
           overflow:auto;
           text-align:justify;
