@@ -14,8 +14,8 @@ $(function(){
   }
   $('body').prepend('<nav><a href="/aetherra/index.html">Aetherra</a><span>'+navLinks+'</span></nav>'+header);
   $('body.manual').prepend(leftMenuManual);
-  if ($('body.manual aside').find('a[data-href$="/'+hashtag+'.html"]').length) {
-    var self = $('body.manual aside').find('a[data-href$="/'+hashtag+'.html"]');
+  if ($('body.manual aside').find('b[data-href$="/'+hashtag+'.html"]').length) {
+    var self = $('body.manual aside').find('b[data-href$="/'+hashtag+'.html"]');
     var href = $(self).data('href');
     var section = href.split('/manual/')[1].split('.html')[0];
     $(self).addClass('active');
