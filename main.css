@@ -500,6 +500,7 @@ body:has(aside) {
 }
 
 body.manual {
+  --header-img:url(https://cdna.artstation.com/p/assets/images/images/091/650/196/4k/mooncolony-aftermath-mooncolony.webp?1757410819);
   & header {
     height:clamp(15rem, 50dvh, 30rem);
     & h1 {
