@@ -640,20 +640,20 @@ ul.species-list {
     cursor:pointer;
     width:20%;
     min-width:10rem;
-    max-width:20rem;
+    max-width:22.5rem;
     flex-grow:1;
     display:grid;
     grid-template-columns:100%;
-    grid-template-rows:10.5rem 8rem 1fr max-content;
+    grid-template-rows:14rem 8rem 1fr max-content;
     grid-template-areas:
       'image'
       'title'
       'space'
       'data';
     background:color-mix(in srgb, var(--fondo) 99%, white);
-    height:20rem;
+    height:25rem;
     &:has(>i) {
-      grid-template-rows:10.5rem 1fr max-content max-content 1fr max-content;
+      grid-template-rows:14rem 1fr max-content max-content 1fr max-content;
       grid-template-areas:
         'image'
         'space'
@@ -661,7 +661,7 @@ ul.species-list {
         'desc'
         'space2'
         'data';
-      height:23rem;
+      height:26rem;
     }
     & > img {
       grid-area:image;
