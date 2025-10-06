@@ -526,8 +526,8 @@ body.manual {
   margin:auto;
   z-index:999;
   background:var(--fondo);
-  width:clamp(15rem, 80dvw, 70rem);
-  height:clamp(10rem, 60dvh, 40rem);
+  width:clamp(15rem, 90dvw, 100rem);
+  height:clamp(10rem, 75dvh, 60rem);
   overflow:hidden;
   box-sizing:border-box;
   box-shadow:0 0 0 100dvmax color-mix(in srgb, var(--body) 95%, transparent);
