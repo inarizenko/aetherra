@@ -644,7 +644,7 @@ ul.species-list {
     flex-grow:1;
     display:grid;
     grid-template-columns:100%;
-    grid-template-rows:9.2rem 8rem 1fr max-content;
+    grid-template-rows:10.5rem 8rem 1fr max-content;
     grid-template-areas:
       'image'
       'title'
@@ -653,7 +653,7 @@ ul.species-list {
     background:color-mix(in srgb, var(--fondo) 99%, white);
     height:20rem;
     &:has(>i) {
-      grid-template-rows:9.2rem 1fr max-content max-content 1fr max-content;
+      grid-template-rows:10.5rem 1fr max-content max-content 1fr max-content;
       grid-template-areas:
         'image'
         'space'
