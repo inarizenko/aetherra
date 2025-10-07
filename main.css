@@ -758,6 +758,7 @@ ul.classes-list {
       place-content:center;
       font:var(--fset-titles3);
       line-height:1em;
+      text-align:left;
     }
     & > p {
       grid-area:desc;
