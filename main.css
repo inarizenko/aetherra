@@ -718,12 +718,12 @@ ul.classes-list {
   padding:0;
   & > li {
     display:grid;
-    grid-template-columns:4rem 1fr;
+    grid-template-columns:4rem 1fr 10rem;
     grid-template-rows:4rem max-content max-content;
     grid-template-areas:
-      'icon name'
-      'desc desc'
-      'list list';
+      'icon name empty'
+      'desc desc empty'
+      'list list empty';
     overflow:hidden;
     background-color:color-mix(in srgb, var(--fondo) 99%, white);
     background-image:var(--_img);
