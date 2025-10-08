@@ -716,6 +716,16 @@ ul.classes-list {
   margin:var(--padding) 0 0;
   gap:var(--padding);
   padding:0;
+  @media (max-width:80rem) {
+    & {
+      grid-template-columns:1fr 1fr;
+    }
+  }
+  @media (max-width:60rem) {
+    & {
+      grid-template-columns:1fr;
+    }
+  }
   & > li {
     display:grid;
     grid-template-columns:4rem 1fr 8rem;
