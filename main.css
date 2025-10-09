@@ -802,6 +802,7 @@ ul.classes-list {
   & details {
     background:color-mix(in srgb, var(--fondo) 99%, var(--title));
     padding:var(--gap);
+    height:fit-content;
     & summary {
       display:flex;
       flex-direction:column;
