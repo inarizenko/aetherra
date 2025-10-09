@@ -526,6 +526,10 @@ body.manual {
     --header-img:url(/aetherra/images/backgrounds.jpg);
     --header-position:center 20%;
   }
+  &[section="planes"] {
+    --header-img:url(/aetherra/images/planes.jpg);
+    --header-position:center 45%;
+  }
 }
 
 *:not(b)[data-tab] {
