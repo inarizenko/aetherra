@@ -53,7 +53,7 @@ $(this).hide();
 $('.tabbed>.section:first-of-type').show();
 $('.tabs>b:first-of-type').addClass('active');
 
-$('.species-list li').on('click', function(){
+$('.species-list li, .classes-list li').on('click', function(){
 var tab = $(this).find('>b[data-tab]').data('tab');
 $(this).parents('body').find('*:not(b)[data-tab="'+tab+'"]').fadeIn();
 $(this).parents('body').find('*:not(b)[data-tab]:not([data-tab="'+tab+'"])').fadeOut();
@@ -105,7 +105,7 @@ $('.tabs>b:first-of-type').addClass('active');
   
     $('html').addClass('loaded');
 
-$('.species-list li').on('click', function(){
+$('.species-list li, .classes-list li').on('click', function(){
 var tab = $(this).find('>b[data-tab]').data('tab');
 $(this).parents('body').find('*:not(b)[data-tab="'+tab+'"]').fadeIn();
 $(this).parents('body').find('*:not(b)[data-tab]:not([data-tab="'+tab+'"])').fadeOut();
