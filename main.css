@@ -522,6 +522,10 @@ body.manual {
     --header-img:url(/aetherra/images/classes.jpg);
     --header-position:center 60%;
   }
+  &[section="backgrounds"] {
+    --header-img:url(/aetherra/images/backgrounds.jpg);
+    --header-position:center 20%;
+  }
 }
 
 *:not(b)[data-tab] {
