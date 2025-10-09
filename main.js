@@ -23,6 +23,38 @@ $(function(){
     $('body').attr('section', section);
     $.get(href, function(data) {
       $('main').html(data);
+
+/*Species*/
+$('*:not(b)[data-tab]').hide();
+
+$('.tabbed>.section').each(function(){
+var title = $(this).data('title');
+$(this).parent('.tabbed').parent('.tabs-body').find('>.tabs').append('<b data-tabbed="'+title+'">'+title+'</div>');
+$(this).hide();
+});
+
+$('.tabbed>.section:first-of-type').show();
+$('.tabs>b:first-of-type').addClass('active');
+
+$('.species-list li, .classes-list li').on('click', function(){
+var tab = $(this).find('>b[data-tab]').data('tab');
+$(this).parents('body').find('*:not(b)[data-tab="'+tab+'"]').fadeIn();
+$(this).parents('body').find('*:not(b)[data-tab]:not([data-tab="'+tab+'"])').fadeOut();
+});
+
+$('*:not(b)[data-tab] .close').on('click', function(){
+$(this).parents('[data-tab]').fadeOut();
+});
+
+$('.tabs>b').on('click', function(){
+var title = $(this).data('tabbed');
+$(this).addClass('active');
+$(this).siblings().removeClass('active');
+$(this).parent('.tabs').parent('.tabs-body').find('>.tabbed>.section[data-title="'+title+'"]').slideDown();
+$(this).parent('.tabs').parent('.tabs-body').find('>.tabbed>.section:not([data-title="'+title+'"])').slideUp();
+});
+/*Species*/
+      
     }).fail(function() {
       $('main').html('<p>No se pudo cargar la página.</p>');
     });
