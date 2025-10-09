@@ -518,6 +518,10 @@ body.manual {
     --header-img:url(/aetherra/images/species.jpg);
     --header-position:center 60%;
   }
+  &[section="classes"] {
+    --header-img:url(/aetherra/images/classes.jpg);
+    --header-position:center 60%;
+  }
 }
 
 *:not(b)[data-tab] {
