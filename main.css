@@ -919,3 +919,10 @@ mapa img[data-overlay="cities"] {
   --_shadow:color-mix(in srgb, #fff 50%, transparent);
   filter: drop-shadow(1px 0px 0px var(--_shadow)) drop-shadow(-1px 0px 0px var(--_shadow)) drop-shadow(0px 1px 0px var(--_shadow)) drop-shadow(0px -1px 0px var(--_shadow));
 }
+
+blockquote {
+  margin: 1em;
+  padding: 1.5em;
+  background: color-mix(in srgb, var(--fondo) 98.25%, var(--title));
+  font-style: italic;
+}
