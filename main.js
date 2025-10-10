@@ -4,7 +4,7 @@ const leftMenuManual = '<aside><h>Jugador</h><ul><li><b data-href="/aetherra/man
 
 $(function(){
   var header = '<header><h1>Aetherra</h1></header>';
-  var navLinks = '<a href="/aetherra/manual/">Manual</a><a href="/aetherra/manual/map.html">Mapa</a><a href="/aetherra/about.html">Acerca de Aetherra</a><a href="/aetherra/credits.html">Créditos</a>';
+  var navLinks = '<a href="/aetherra/manual/">Manual</a><a href="/aetherra/map.html">Mapa</a><a href="/aetherra/about.html">Acerca de Aetherra</a><a href="/aetherra/credits.html">Créditos</a>';
   if (window.location.pathname.indexOf('/manual') !== -1) {
     $('body').addClass('manual');
     header = '<header><h1>Manual del Jugador</h1></header>';
