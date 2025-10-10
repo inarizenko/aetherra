@@ -63,10 +63,10 @@ $(this).parent('.tabs').parent('.tabs-body').find('>.tabbed>.section:not([data-t
   $('aside b[data-href]').on('click', function() {
     var href = $(this).data('href');
     var section = href.split('/manual/')[1].split('.html')[0];
-    location.hash = section;
-    $(this).parents('aside').find('b[data-href]').removeClass('active');
+    $(this).parents('aside').find('b').removeClass('active');
     $(this).addClass('active');
     $('body').attr('section', section);
+    location.hash = section;
     // Optional: show loading state
     $('main').html('<p>Cargando...</p>');
 
