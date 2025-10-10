@@ -154,5 +154,17 @@ $(this).siblings().removeClass('active');
 $(this).parent('.tabs').parent('.tabs-body').find('>.tabbed>.section[data-title="'+title+'"]').slideDown();
 $(this).parent('.tabs').parent('.tabs-body').find('>.tabbed>.section:not([data-title="'+title+'"])').slideUp();
 });
-  
+
+$('mapatabs b').click(function(){
+var overlay = $(this).data('overlay-tab');
+$(this).parent().next('mapa').find('img:not([data-overlay]').show();
+$(this).parent().next('mapa').find('img[data-overlay]:not([data-overlay="'+overlay+'"])').hide();
+$(this).parent().next('mapa').find('img[data-overlay="'+overlay+'"]').show();
+$(this).addClass('active');
+$(this).siblings().removeClass('active');
+if ($(this).is('[data-hide-base]')){
+$(this).parent().next('mapa').find('img:not([data-overlay]').hide();
+}
+});
+
 });
