@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <title>Mapa de Aetherra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://dl.dropboxusercontent.com/scl/fi/1i3e9ue6t6gkpazbtczno/malihu-update.js?rlkey=8p375dq6eouy1tihu6i0ebtpb&amp;dl=0"></script>
+  <link href="/aetherra/main.css" rel="stylesheet"/>
+  <script src="/aetherra/main.js"></script>
+  <link rel="icon" type="image/x-icon" href="/aetherra/favicon.ico"/>
+</head>
+<body>
+<main>
+<h2>Mapa de Aetherra</h2>
+
+<mapatabs class="flex">
+<b data-overlay-tab="kingdoms" data-hide-base>Reinos</b>
+<b data-overlay-tab="regions">Regiones</b>
+<b data-overlay-tab="families">Familias</b>
+<b data-overlay-tab="water">Ríos/Lagos/Mares</b>
+<b data-overlay-tab="cities">Ciudades</b>
+</mapatabs>
+<mapa>
+<img src="/aetherra/images/map-base.jpg"/>
+<img data-overlay="kingdoms" src="/aetherra/images/map-kingdoms.jpg"/>
+<img data-overlay="regions" src="/aetherra/images/map-regions.png"/>
+<img data-overlay="families" src="/aetherra/images/map-families.png"/>
+<img data-overlay="water" src="/aetherra/images/map-water.png"/>
+<img data-overlay="cities" src="/aetherra/images/map-cities.png"/>
+</mapa>
+
+</main>
+</body>
+</html>
