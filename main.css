@@ -861,9 +861,11 @@ ul.classes-list {
 
 
 main:has(mapa) {
-  width:clamp(20rem, calc(100dvw - (var(--margin) * 2)), 180rem);
+  width:clamp(20rem, calc(100dvw - (var(--gap) * 2)), 180rem);
   overflow:hidden;
   box-sizing:border-box;
+  padding:var(--gap);
+  margin:var(--gap);
 }
 
 mapatabs {
