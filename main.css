@@ -859,6 +859,7 @@ ul.classes-list {
   }
 }
 
+body:has(mapa) header { display:none; }
 
 main:has(mapa) {
   width:clamp(20rem, calc(100dvw - (var(--gap) * 2)), 180rem);
