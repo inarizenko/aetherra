@@ -862,7 +862,7 @@ ul.classes-list {
 body:has(mapa) header { display:none; }
 
 main:has(mapa) {
-  width:clamp(20rem, calc(100dvw - (var(--gap) * 2)), 180rem);
+  width:clamp(20rem, calc(100dvw - (var(--gap) * 4)), 180rem);
   overflow:hidden;
   box-sizing:border-box;
   padding:var(--gap);
