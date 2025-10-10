@@ -18,8 +18,8 @@ $(function(){
     var self = $('body.manual aside').find('b[data-href$="/'+hashtag+'.html"]');
     var href = $(self).data('href');
     var section = href.split('/manual/')[1].split('.html')[0];
+    $(self).parents('aside').find('b[data-href]').removeClass('active');
     $(self).addClass('active');
-    $(self).parents('aside').find('b.active').not(self).removeClass('active');
     $('body').attr('section', section);
     $.get(href, function(data) {
       $('main').html(data);
@@ -64,8 +64,8 @@ $(this).parent('.tabs').parent('.tabs-body').find('>.tabbed>.section:not([data-t
     var href = $(this).data('href');
     var section = href.split('/manual/')[1].split('.html')[0];
     location.hash = section;
+    $(this).parents('aside').find('b[data-href]').removeClass('active');
     $(this).addClass('active');
-    $(this).parents('aside').find('b.active').not(this).removeClass('active');
     $('body').attr('section', section);
     // Optional: show loading state
     $('main').html('<p>Cargando...</p>');
