@@ -492,6 +492,23 @@ aside {
   }
 }
 
+aside > ul > li > ul > li:has(>ul) {
+  & > ul {
+    max-height:0;
+    overflow-y:hidden;
+    padding-block:0;
+    padding-left:0em;
+    transition:ease .5s;
+    & > li {
+      margin-left:1.5em;
+    }
+  }
+  &:hover > ul, &:has(>ul:hover, .active) > ul {
+    max-height:20rem;
+    padding-block:1em;
+  }
+}
+
 body:has(aside) {
   padding-left:var(--side-w)!important;
 }
