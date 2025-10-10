@@ -167,4 +167,59 @@ $(this).parent().next('mapa').find('img:not([data-overlay]').hide();
 }
 });
 
+$(function() {
+  $('mapa').each(function() {
+    const $mapa = $(this);
+    const $img = $mapa.find('img');
+    let zoomActive = false;
+    const zoomLevel = 2.5;
+
+    // Style setup
+    $mapa.css({
+      overflow: 'hidden',
+      cursor: 'zoom-in'
+    });
+
+    $img.css({
+      width: '100%',
+      height: 'auto',
+      transition: 'transform 0.25s ease-out',
+      transformOrigin: 'center center',
+      willChange: 'transform'
+    });
+
+    // Toggle zoom on click
+    $mapa.on('click', function(e) {
+      zoomActive = !zoomActive;
+      $mapa.css('cursor', zoomActive ? 'zoom-out' : 'zoom-in');
+
+      if (!zoomActive) {
+        $img.css('transform', 'scale(1)');
+      } else {
+        updateZoom(e);
+      }
+    });
+
+    // Move zoom center with mouse
+    $mapa.on('mousemove', function(e) {
+      if (!zoomActive) return;
+      updateZoom(e);
+    });
+
+    function updateZoom(e) {
+      const rect = $mapa[0].getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const originX = (x / rect.width) * 100;
+      const originY = (y / rect.height) * 100;
+
+      $img.css({
+        transformOrigin: `${originX}% ${originY}%`,
+        transform: `scale(${zoomLevel})`
+      });
+    }
+  });
+});
+
 });
