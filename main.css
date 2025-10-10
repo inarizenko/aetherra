@@ -841,3 +841,48 @@ ul.classes-list {
     }
   }
 }
+
+
+main:has(mapa) {
+  width:clamp(20rem, calc(100dvw - (var(--margin) * 2)), 180rem);
+  overflow:hidden;
+  box-sizing:border-box;
+}
+
+mapatabs {
+  gap:var(--gap);
+  margin-bottom:var(--gap);
+  & > b {
+    flex:1;
+    background:color-mix(in srgb, var(--fondo) 98%, var(--title));
+    text-transform:var(--tt-titles-small);
+    font:700 var(--fset-titles4);
+    text-align:center;
+    line-height:1em;
+    padding:1em;
+    cursor:pointer;
+    transition:ease .3s;
+    &.active, &:hover {
+      color:var(--accent1);
+      background:color-mix(in srgb, var(--fondo) 96%, var(--title));
+    }
+  }
+}
+
+mapa {
+  width:100%;
+  height:fit-content;
+  position:relative;
+  overflow:hidden;
+  display:block;
+  & img {
+    width:100%;
+    object-fit:cover;
+    object-position:center;
+    &[data-overlay] {
+      position:absolute;
+      inset:0;
+      display:none;
+    }
+  }
+}
