@@ -884,5 +884,8 @@ mapa {
       inset:0;
       display:none;
     }
+    &[data-hide-base] {
+      position:unset;
+    }
   }
 }
