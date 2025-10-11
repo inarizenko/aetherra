@@ -930,6 +930,7 @@ blockquote {
 main:has(gallery) {
   & h2:not(:first-of-type), & h3, & h4, & h5, & h6, & h7 {
     margin-inline:auto;
+    margin-block:var(--padding);
     text-align:Center;
   }
 }
@@ -939,7 +940,7 @@ gallery {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: var(--gap);
+  gap:var(--padding);
   & img {
     aspect-ratio:var(--ar);
     width:calc((100% / var(--col, 2)) - var(--gap));
