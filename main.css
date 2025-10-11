@@ -926,3 +926,25 @@ blockquote {
   background: color-mix(in srgb, var(--fondo) 98.25%, var(--title));
   font-style: italic;
 }
+
+main:has(gallery) {
+  & h2:not(:first-of-type), & h3, & h4, & h5, & h6, & h7 {
+    margin-inline:auto;
+    text-align:Center;
+  }
+}
+
+gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  & img {
+    aspect-ratio:var(--ar);
+    width:calc((100% / var(--col, 2)) - 1%);
+    object-fit:cover;
+    object-position:center;
+    flex-grow:1;
+  }
+}
