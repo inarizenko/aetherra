@@ -935,6 +935,12 @@ main:has(gallery) {
   }
 }
 
+body:has(gallery) {
+  --header:#555;
+  --header-img:url(https://i.imgur.com/HkpYr2i.jpeg);
+  --header-position:center;
+}
+
 gallery {
   display: flex;
   justify-content: center;
