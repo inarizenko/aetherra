@@ -949,8 +949,8 @@ gallery {
   gap:var(--padding);
   & img {
     aspect-ratio:var(--ar);
-    width:calc((100% / var(--col, 2)) - var(--gap));
-    max-width:calc((100% / var(--col, 2)) - (var(--gap) / 2));
+    width:calc((100% / var(--col, 2)) - var(--padding));
+    max-width:calc((100% / var(--col, 2)) - (var(--padding) / 2));
     object-fit:cover;
     object-position:center;
     flex-grow:1;
