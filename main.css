@@ -956,3 +956,21 @@ gallery {
     flex-grow:1;
   }
 }
+
+float {
+  float: left;
+  max-width: 20rem;
+  overflow: hidden;
+  margin-right: var(--padding);
+  padding:var(--gap);
+  background:color-mix(in srgb, var(--fondo) 98%, var(--title));
+  margin-bottom:var(--gap);
+  & img {
+    width:100%;
+  }
+  &[right] {
+    float:right;
+    margin-right:0;
+    margin-left:var(--padding);
+  }
+}
