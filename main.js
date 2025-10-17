@@ -117,6 +117,16 @@ desc:'Una gema translúcida y etérea, tallada en forma de lágrima, que palpita
 source:'Creado por Rafa.'
 },
 {
+name:'Baraja de Cartas Retornantes',
+image:'https://i.imgur.com/vLDlSld.png',
+type:'Arma (dardo), requiere sintonización',
+rarity:'Poco común',
+weight:'0,3 libras',
+price:'800PO',
+desc:'A simple vista, esta parece ser una baraja ordinaria de cartas de juego. Sin embargo, fue encantada por un célebre mago del azar y puede emplearse como arma, infligiendo daño de fuerza.<br/><br/>Puedes utilizar la baraja de dos maneras:<ul><li><b>Acción:</b> Puedes usar tu acción para lanzar un número de cartas igual a tu nivel. Cada carta inflige daño igual a (tu nivel × 1d4) + tu modificador de Destreza.</li><li><b>Acción adicional:</b> Puedes usar tu acción adicional para lanzar una sola carta, que inflige 1d4 + tu modificador de Destreza de daño.</li></ul>Una vez lanzadas, puedes chasquear los dedos para hacer que todas las cartas regresen mágicamente a la baraja.<br/><br/>Si tienes competencia con dardos, puedes añadir tu bonificador de competencia a las tiradas de ataque que realices con esta arma.<hr/><b>Afinidad mágica</b><br/><br/>Si eres un lanzador de conjuros, puedes usar tu bonificador de ataque con conjuros en lugar de tu modificador de Destreza para las tiradas de ataque con la baraja, y tu modificador de característica mágica (Carisma, Inteligencia o Sabiduría) para las tiradas de daño.<hr/><b>Fallo crítico</b><br/><br/>Si obtienes un 1 natural en una tirada de ataque al usar el modo de lanzamiento múltiple, las cartas atacan al azar a un miembro de tu grupo. Si obtienes un 2, las cartas también atacan a un miembro de tu grupo, pero tú eliges a cuál.<hr/><b>Maestría</b><br/><br/>Esta arma posee la siguiente propiedad de maestría. Para usarla, debes tener una característica que te permita hacerlo.<br/><br/><b>Vex.</b> Si impactas a una criatura con esta arma e infliges daño, tienes ventaja en tu próxima tirada de ataque contra esa criatura antes del final de tu siguiente turno.<hr/><b>Notas:</b> Finesse (Sutil), Thrown (Arrojadiza), Vex.',
+source:'Creado por <a href="https://www.dndbeyond.com/magic-items/5483446-deck-of-returning-cards">TheDeckhanter</a> en DnDBeyond.'
+},
+{
 name:'Guantelete de Sombras',
 image:'https://i.imgur.com/MNLZM3f.png',
 type:'Objeto maravilloso, requiere sintonización',
