@@ -1,0 +1,73 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "Aetherra",
+				"abbreviation": "AETHERRA",
+				"full": "Aetherra",
+				"version": "1",
+				"authors": [
+					"R. E. Chabaud"
+				],
+				"color": "e869c6",
+				"colorNight": "e869c6"
+			}
+		]
+	},
+
+	"spell": [
+		{
+			"name": "Absorb Pain",
+			"source": "Aetherra",
+			"level": 0,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Una criatura que no seas tú y que toques recupera un número de puntos de golpe igual a {@dice 1d6} + tu modificador de la habilidad de conjuro, y a cambio recibes {@dice 1d6} puntos de daño necrótico. Este hechizo no tiene efecto sobre muertos vivientes o constructos."
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"miscTags": [
+				"HL"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "XPHB"
+					},
+					{
+						"name": "Druid",
+						"source": "XPHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "XPHB"
+					}
+				]
+			},
+			"uniqueId": "18e712b1-7c0e-45a1-8f11-c7bf9ac4fbd8"
+		}
+	]
+}
