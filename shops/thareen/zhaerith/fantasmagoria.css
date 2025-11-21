@@ -41,6 +41,7 @@ body {
 .app {
   width: 100%;
   max-width: var(--maxw);
+  padding-bottom: 32px;
 }
 
 header {
