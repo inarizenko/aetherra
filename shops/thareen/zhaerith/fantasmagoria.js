@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 3,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHq4i9vTiri5846kS1QuNZko8sW1RUx6b8ew&s",
+      image: "https://i.imgur.com/OoIYKz5.png",
       name: "Cap of Water Breathing",
       type: "Objeto maravilloso",
       rarity: "Poco Común",
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 4,
-      image: "https://darkalliance.wiki.fextralife.com/file/Dark-Alliance/lightning_resistance_ring_wulfar_dark_alliance_wiki_guide_180px.png",
+      image: "https://i.imgur.com/jN0Majk.png",
       name: "Citrine Ring of Resistance (Lightning)",
       type: "Anillo",
       rarity: "Raro",
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 6,
-      image: "https://www.thievesguild.cc/images/magicitems/crystal-ball.jpg",
+      image: "https://i.imgur.com/bVcFbUq.png",
       name: "Crystal Ball",
       type: "Objeto maravilloso",
       rarity: "Muy Raro",
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 8,
-      image: "https://www.thievesguild.cc/images/magicitems/dust-of-dryness.jpg",
+      image: "https://i.imgur.com/lf7wR2m.png",
       name: "Dust of Dryness (1 pizca)",
       type: "Objeto maravilloso",
       rarity: "Poco Común",
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 11,
-      image: "https://www.thievesguild.cc/images/magicitems/gloves-of-swimming-and-climbing.jpg",
+      image: "https://i.imgur.com/fd2nNIN.png",
       name: "Gloves of Swimming and Climbing",
       type: "Objeto maravilloso",
       rarity: "Poco Común",
@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 15,
-      image: "https://insomniacnation.wordpress.com/wp-content/uploads/2018/04/jet.jpg",
+      image: "https://i.imgur.com/iKRszz7.png",
       name: "Jet Ring of Resistance (Necrotic)",
       type: "Anillo",
       rarity: "Raro",
@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 17,
-      image: "https://www.thievesguild.cc/images/magicitems/oil-of-slipperiness.jpg",
+      image: "https://i.imgur.com/ToUojGi.png",
       name: "Oil of Slipperiness",
       type: "Poción",
       rarity: "Poco Común",
@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 18,
-      image: "https://static.wikia.nocookie.net/forgottenrealms/images/b/bd/Potion_of_animal_friendship.png/revision/latest?cb=20240506234252",
+      image: "https://i.imgur.com/ORwKTci.png",
       name: "Potion of Animal Friendship",
       type: "Poción",
       rarity: "Poco Común",
@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 27,
-      image: "https://img.ttg.club/item_magic/Potion_of_invulnerability.png",
+      image: "https://i.imgur.com/jtKp0S1.png",
       name: "Potion of Invulnerability",
       type: "Poción",
       rarity: "Raro",
@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 28,
-      image: "https://static.wikia.nocookie.net/forgottenrealms/images/f/f5/Potion_of_Mind_Reading.png/revision/latest?cb=20230924074731",
+      image: "https://i.imgur.com/Usb5R1G.png",
       name: "Potion of Mind Reading",
       type: "Poción",
       rarity: "Raro",
@@ -447,19 +447,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 38,
-      image: "https://www.thievesguild.cc/images/magicitems/ring-of-resistance-force.jpg",
-      name: "Sapphire Ring of Resistance (Force)",
-      type: "Anillo",
-      rarity: "Raro",
-      price: 6000,
-      desc:
-        "Obtienes resistencia a un tipo de daño mientras llevas puesto este anillo. Este anillo tiene un zafiro, que da resistencia al daño por Fuerza.",
-      attunement: "",
-      tools:"https://5e.tools/items.html#ring%20of%20resistance_xdmg"
-    },
-    {
-      id: 38,
-      image: "https://www.thievesguild.cc/images/magicitems/ring-of-resistance-force.jpg",
+      image: "https://i.imgur.com/E721m1S.png",
       name: "Sapphire Ring of Resistance (Force)",
       type: "Anillo",
       rarity: "Raro",
