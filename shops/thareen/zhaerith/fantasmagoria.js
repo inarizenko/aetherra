@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
       rarity: "Raro",
       price: 270,
       desc:
-        "Al beber esta poción, obtienes el efecto "reducir" del conjuro Enlarge/Reduce durante 1d4 horas (no se requiere concentración).<br/><br/>El color rojo del líquido de la poción se contrae continuamente formando una diminuta gota que luego se expande tiñendo el líquido transparente que la rodea. Agitar el frasco no interrumpe este proceso.",
+        "Al beber esta poción, obtienes el efecto 'reducir' del conjuro Enlarge/Reduce durante 1d4 horas (no se requiere concentración).<br/><br/>El color rojo del líquido de la poción se contrae continuamente formando una diminuta gota que luego se expande tiñendo el líquido transparente que la rodea. Agitar el frasco no interrumpe este proceso.",
       attunement: "",
       tools:"https://5e.tools/items.html#potion%20of%20diminution_xdmg"
     },
