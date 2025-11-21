@@ -210,6 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           <div class="tags"><span class="tag">${it.type}</span><span class="tag">${it.rarity}</span><span class="tag">${it.attunement}</span></div>
           <div class="actions">
+            <a href="${it.5etools}" title="Ver página de item en 5e.tools"><img src="https://i.imgur.com/Ym2ZJlQ.png"/></a>
             <button class="btn-ghost" data-id="${it.id}" aria-label="Ver detalles">Detalles</button>
             <button class="btn" data-buy="${it.id}">Añadir</button>
           </div>
@@ -230,6 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
     $("#modalName").textContent = it.name;
     $("#modalDesc").textContent = it.desc;
     $("#modalPrice").textContent = `${it.price} PO`;
+    $("#modalAdd+a").setAttribute("title", it.5etools);
     $("#modalAdd").onclick = () => {
       addToCart(it.id);
       closeModal();
