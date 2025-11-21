@@ -1,4 +1,4 @@
-
+document.addEventListener('DOMContentLoaded', () => {
     // Sample inventory data — replace or extend.
     const ITEMS = [
       {id:1, image:'http://placehold.co/40', name:'Moonsteel Dagger', type:'Weapon', rarity:'Poco Común', price:45, desc:'A finely balanced dagger forged from moonsteel. Grants +1 to stealth checks when concealed.', attunement: ''},
@@ -173,3 +173,5 @@
       });
     });
     });
+
+});
