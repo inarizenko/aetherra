@@ -229,7 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
     $("#modalType").textContent = `${it.type} • ${it.rarity}`;
     $("#modalName").textContent = it.name;
     $("#modalDesc").textContent = it.desc;
-    $("#modalPrice").textContent = `${it.price} GP`;
+    $("#modalPrice").textContent = `${it.price} PO`;
     $("#modalAdd").onclick = () => {
       addToCart(it.id);
       closeModal();
