@@ -2,17 +2,17 @@
   color-scheme:dark;
   --bg: #111;
   --bg1: #151515;
-  --card: #0b1220;
-  --muted: #94a3b8;
-  --accent: #f59e0b;
-  --accent2: #f97316;
-  --accent3: #0ea5a9;
-  --accent4: #06b6d4;
-  --accent5: #7c3aed;
+  --card: #151515;
+  --muted: #707070;
+  --accent: #c79a1b;
+  --accent2: #98740d;
+  --accent3: #9356a0;
+  --accent4: #793687;
+  --accent5: #4f2c57;
   --glass: rgba(255, 255, 255, 0.04);
   --radius: 12px;
   --maxw: calc(100dvw - 64px);
-  --shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+  --shadow: 0 6px 18px rgba(6, 6, 6, 0.6);
   color-scheme: dark;
 }
 
@@ -309,7 +309,7 @@ aside h3 {
   display: none;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 0.8));
+  background: rgba(7, 7, 7, 0.8);
 }
 
 .modal {
