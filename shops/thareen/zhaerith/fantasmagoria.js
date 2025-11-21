@@ -613,7 +613,7 @@ document.addEventListener("DOMContentLoaded", () => {
     $("#modalAvatar").innerHTML = `<img src="${it.image}" alt="${it.name}" style="width:100%; height:100%; object-fit:cover; border-radius:8px;"/>`;
     $("#modalType").textContent = `${it.type} • ${it.rarity}`;
     $("#modalName").textContent = it.name;
-    $("#modalDesc").textContent = it.desc;
+    $("#modalDesc").innerHTML = it.desc;
     $("#modalPrice").textContent = `${it.price} PO`;
     $("#modalAdd+a").setAttribute("title", it.tools);
     $("#modalAdd").onclick = () => {
