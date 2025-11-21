@@ -385,6 +385,90 @@ document.addEventListener("DOMContentLoaded", () => {
       attunement: "",
       tools:"https://5e.tools/items.html#potion%20of%20resistance_xdmg"
     },
+    {
+      id: 33,
+      image: "https://bg3.wiki/w/images/7/73/POT_Potion_of_Superior_Healing_Unfaded.png",
+      name: "Potion of Superior Healing (2)",
+      type: "Poción",
+      rarity: "Muy Raro",
+      price: 450,
+      desc:
+        "Al beber esta poción, recuperas 8d4 + 8 puntos de golpe. El líquido rojo de la poción brilla al agitarse.",
+      attunement: "",
+      tools:"https://5e.tools/items.html#potion%20of%20superior%20healing_xdmg"
+    },
+    {
+      id: 34,
+      image: "https://bg3.wiki/w/images/7/78/POT_Potion_of_Supreme_Healing_Unfaded.png",
+      name: "Potion of Supreme Healing",
+      type: "Poción",
+      rarity: "Muy Raro",
+      price: 1350,
+      desc:
+        "Al beber esta poción, recuperas 10d4 + 20 puntos de golpe. El líquido rojo de la poción brilla al agitarse.",
+      attunement: "",
+      tools:"https://5e.tools/items.html#potion%20of%20supreme%20healing_xdmg"
+    },
+    {
+      id: 35,
+      image: "https://files.d20.io/images/414423405/sLF_MKcvPZPYd_WYgeAvfQ/original.png",
+      name: "Quiver of Ehlonna",
+      type: "Objeto maravilloso",
+      rarity: "Poco Común",
+      price: 1000,
+      desc:
+        "Cada uno de los tres compartimentos del carcaj se conecta a un espacio extradimensional que le permite contener numerosos objetos sin superar nunca los 900 gramos de peso. El compartimento más pequeño puede albergar hasta 60 flechas , virotes u objetos similares. El compartimento mediano puede contener hasta 18 jabalinas u objetos similares. El compartimento más largo puede albergar hasta 6 objetos largos, como arcos, bastones o lanzas.<br/><br/>Puedes extraer cualquier objeto que contenga el carcaj como si lo hicieras de un carcaj o vaina normal.",
+      attunement: "",
+      tools:"https://5e.tools/items.html#quiver%20of%20ehlonna_xdmg"
+    },
+    {
+      id: 36,
+      image: "https://5e.tools/img/items/XDMG/Ring%20of%20Protection.webp",
+      name: "Ring of Protection",
+      type: "Objeto maravilloso",
+      rarity: "Raro",
+      price: 3500,
+      desc:
+        "Obtienes un bonificador de +1 a la Clase de Armadura y a las tiradas de salvación mientras llevas puesto este anillo.",
+      attunement: "requiere sintonización",
+      tools:"https://5e.tools/items.html#ring%20of%20protection_xdmg"
+    },
+    {
+      id: 37,
+      image: "https://5e.tools/img/items/XDMG/Robe%20of%20Useful%20Items.webp",
+      name: "Robe of Useful Items (7 special patches)",
+      type: "Objeto maravilloso",
+      rarity: "Poco Común",
+      price: 20200,
+      desc:
+        "Esta túnica está cubierta de parches de tela de diversas formas y colores. Mientras la llevas puesta, puedes realizar una acción mágica para desprender uno de los parches, transformándolo en el objeto o criatura que representa. Una vez que se retira el último parche, la túnica se convierte en una prenda común.<br/><br/>La túnica tiene dos parches de cada uno de los siguientes tipos:<br/><br/>- Linterna de ojo de buey (llena y encendida)<br/>- Daga<br/>- Espejo<br/>- Polo<br/>- Cuerda (enrollada)<br/>- Bolsa<br/>Además, la túnica tiene 7 parches adicionales.",
+      attunement: "",
+      tools:"https://5e.tools/items.html#robe%20of%20useful%20items_xdmg"
+    },
+    {
+      id: 38,
+      image: "https://www.thievesguild.cc/images/magicitems/ring-of-resistance-force.jpg",
+      name: "Sapphire Ring of Resistance (Force)",
+      type: "Anillo",
+      rarity: "Raro",
+      price: 6000,
+      desc:
+        "Obtienes resistencia a un tipo de daño mientras llevas puesto este anillo. Este anillo tiene un zafiro, que da resistencia al daño por Fuerza.",
+      attunement: "",
+      tools:"https://5e.tools/items.html#ring%20of%20resistance_xdmg"
+    },
+    {
+      id: 38,
+      image: "https://www.thievesguild.cc/images/magicitems/ring-of-resistance-force.jpg",
+      name: "Sapphire Ring of Resistance (Force)",
+      type: "Anillo",
+      rarity: "Raro",
+      price: 6000,
+      desc:
+        "Obtienes resistencia a un tipo de daño mientras llevas puesto este anillo. Este anillo tiene un zafiro, que da resistencia al daño por Fuerza.",
+      attunement: "",
+      tools:"https://5e.tools/items.html#ring%20of%20resistance_xdmg"
+    },
   ];
   
   // UI state
