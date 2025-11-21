@@ -3,88 +3,40 @@ document.addEventListener("DOMContentLoaded", () => {
   const ITEMS = [
     {
       id: 1,
-      image: "http://placehold.co/40",
-      name: "Moonsteel Dagger",
-      type: "Weapon",
+      image: "https://5e.tools/img/items/XDMG/Alchemy%20Jug.webp",
+      name: "Alchemy Jug (2)",
+      type: "Objeto maravilloso",
       rarity: "Poco Común",
-      price: 45,
+      price: 6000,
       desc:
-        "A finely balanced dagger forged from moonsteel. Grants +1 to stealth checks when concealed.",
-      attunement: ""
+        "Esta jarra de cerámica parece tener capacidad para un galón de líquido y pesa 12 libras, tanto llena como vacía. Al agitarla, el líquido se mueve, incluso estando vacía.<br/><br/>Puedes realizar una acción mágica y nombrar un líquido de la tabla de Líquidos de la Jarra de Alquimia para que la jarra produzca dicho líquido. Después, puedes destapar la jarra con una acción de Utilizar y verter ese líquido, hasta 2 galones por minuto. La cantidad máxima de líquido que la jarra puede producir depende del líquido que hayas nombrado.<br/><br/>Una vez que la jarra comienza a producir un líquido, no puede producir otro diferente, ni más del que ya ha alcanzado su máximo, hasta el amanecer siguiente.",
+      attunement: "",
+      tools:"https://5e.tools/items.html#alchemy%20jug_xdmg"
     },
     {
       id: 2,
-      image: "http://placehold.co/40",
-      name: "Traveler's Cloak",
-      type: "Armor",
-      rarity: "Común",
-      price: 12,
+      image: "https://5e.tools/img/items/XDMG/Broom%20of%20Flying.webp",
+      name: "Broom of Flying",
+      type: "Objeto maravilloso",
+      rarity: "Poco Común",
+      price: 8000,
       desc:
-        "A weatherproof cloak with deep pockets and subtle stitching for concealment.",
-      attunement: ""
+        "Esta escoba de madera funciona como una escoba común hasta que te subes a ella y usas un hechizo para hacerla levitar bajo ti, momento en el que puedes volar sobre ella. Tiene una velocidad de vuelo de 15 metros. Puede cargar hasta 180 kilos, pero su velocidad de vuelo se reduce a 9 metros al cargar más de 90 kilos. La escoba deja de levitar al aterrizar o cuando dejas de usarla.<br/><br/>Como acción mágica, puedes enviar la escoba a volar sola a un destino a menos de 1 milla de ti si le indicas el lugar y lo conoces. La escoba regresa a ti cuando realizas una acción mágica y usas una palabra de mando si aún se encuentra a menos de 1 milla de ti.",
+      attunement: "requiere sintonización",
+      tools:"https://5e.tools/items.html#broom%20of%20flying_xdmg"
     },
     {
       id: 3,
-      image: "http://placehold.co/40",
-      name: "Phantom Lantern",
-      type: "Wondrous",
-      rarity: "Raro",
-      price: 220,
-      desc:
-        "Emits a soft light that only allies can see. Glows brighter near hidden doors.",
-      attunement: ""
-    },
-    {
-      id: 4,
-      image: "http://placehold.co/40",
-      name: "Everfull Waterskin",
-      type: "Wondrous",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHq4i9vTiri5846kS1QuNZko8sW1RUx6b8ew&s",
+      name: "Cap of Water Breathing",
+      type: "Objeto maravilloso",
       rarity: "Poco Común",
-      price: 60,
-      desc: "A waterskin that refills once per day at dawn.",
-      attunement: ""
-    },
-    {
-      id: 5,
-      image: "http://placehold.co/40",
-      name: "Sentinel Shield",
-      type: "Armor",
-      rarity: "Raro",
-      price: 350,
-      desc: "A shield with runes that vibrate when a foe readies an attack.",
-      attunement: ""
-    },
-    {
-      id: 6,
-      image: "http://placehold.co/40",
-      name: "Scroll of Whispering",
-      type: "Consumable",
-      rarity: "Raro",
-      price: 120,
-      desc: "Single-use scroll that carries a whispered message across miles.",
-      attunement: ""
-    },
-    {
-      id: 7,
-      image: "http://placehold.co/40",
-      name: "Roguish Gloves",
-      type: "Armor",
-      rarity: "Común",
-      price: 18,
-      desc: "Thin gloves that improve grip and lockpicking by a small margin.",
-      attunement: ""
-    },
-    {
-      id: 8,
-      image: "http://placehold.co/40",
-      name: "Dragonbone Longspear",
-      type: "Weapon",
-      rarity: "Muy Raro",
-      price: 1250,
+      price: 1000,
       desc:
-        "A long spear made from dragonbone. Imbued with a faint elemental hum.",
-      attunement: ""
-    }
+        "Mientras llevas puesto este gorro bajo el agua, puedes realizar una acción mágica para crear una burbuja de aire alrededor de tu cabeza. Esta burbuja te permite respirar con normalidad bajo el agua. La burbuja permanece contigo hasta que te quitas el gorro o sales del agua.",
+      attunement: "",
+      tools:"https://5e.tools/items.html#cap%20of%20water%20breathing_xdmg"
+    },
   ];
 
   // UI state
