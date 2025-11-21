@@ -344,3 +344,48 @@ aside h3 {
 .muted {
   color: var(--muted);
 }
+
+#modalAdd+a {
+  height: 37px;
+  display: inline-flex;
+  vertical-align: top;
+  box-sizing:border-box;
+  padding:10px;
+  place-content:center;
+  text-align:center;
+  background:var(--glass);
+  margin-left:7px;
+  border-radius: 10px;
+  & img {
+    height:stretch;
+    aspect-ratio:1;
+  }
+  &[href=""], &[href="undefined"] {
+    display:none;
+  }
+}
+
+button#modalAdd {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.actions > a {
+  height: 39px;
+  display: inline-flex;
+  vertical-align: top;
+  box-sizing:border-box;
+  padding:10px;
+  place-content:center;
+  text-align:center;
+  border:1px solid rgba(255, 255, 255, 0.06);
+  margin-left:7px;
+  border-radius: 10px;
+  & img {
+    height:stretch;
+    aspect-ratio:1;
+  }
+  &[href=""], &[href="undefined"] {
+    display:none;
+  }
+}
