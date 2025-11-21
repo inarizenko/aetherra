@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
       rarity: "Poco Común",
       price: 270,
       desc:
-        "Al beber esta poción, obtienes el efecto "agrandar" del hechizo Enlarge/Reduce durante 10 minutos (no se requiere concentración).<br/><br/>El color rojo del líquido de la poción se expande continuamente desde una minúscula gota, tiñendo el líquido transparente que la rodea, para luego contraerse. Agitar el frasco no interrumpe este proceso.",
+        "Al beber esta poción, obtienes el efecto 'agrandar' del hechizo Enlarge/Reduce durante 10 minutos (no se requiere concentración).<br/><br/>El color rojo del líquido de la poción se expande continuamente desde una minúscula gota, tiñendo el líquido transparente que la rodea, para luego contraerse. Agitar el frasco no interrumpe este proceso.",
       attunement: "",
       tools:"https://5e.tools/items.html#potion%20of%20growth_xdmg"
     },
