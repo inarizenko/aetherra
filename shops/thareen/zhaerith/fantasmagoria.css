@@ -10,7 +10,7 @@
   --accent5: #7c3aed;
   --glass: rgba(255, 255, 255, 0.04);
   --radius: 12px;
-  --maxw: 1100px;
+  --maxw: calc(100dvw - 64px);
   --shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
   color-scheme: dark;
 }
@@ -180,7 +180,7 @@ aside h3 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   gap: 14px;
 }
 
