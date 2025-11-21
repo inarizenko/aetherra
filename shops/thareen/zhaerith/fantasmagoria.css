@@ -211,10 +211,12 @@ aside h3 {
   place-items: center;
   font-weight: 700;
   flex-shrink:0;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
   & img {
     height:calc(100% - 10px);
     aspect-ratio:1;
-    object-fit:cover;
+    object-fit:contain!important;
     object-position:center;
   }
 }
@@ -397,10 +399,12 @@ button#modalAdd {
 }
 
 #modalAvatar {
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
   & img {
     height:calc(100% - 10px);
     aspect-ratio:1;
-    object-fit:cover;
+    object-fit:contain!important;
     object-position:center;
   }
 }
