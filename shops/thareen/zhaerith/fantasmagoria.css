@@ -324,6 +324,7 @@ aside h3 {
   width: 640px;
   max-width: 95%;
   box-shadow: var(--shadow);
+  max-height: 90dvh;
 }
 
 .modal .row {
@@ -469,4 +470,23 @@ p.lead {
 
 .modal .desc {
   color:#eee;
+  margin-right:-9px;
+  padding-right:9px;
+  overflow: auto;
+  min-height: 0;
+}
+
+.modal div:has(>.desc) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 0;
+  align-self: stretch;
+  overflow: hidden;
+}
+
+.modal div:has(>div>.desc) {
+  min-height: 0;
+  max-height: calc(90dvh - 18px - 18px);
 }
