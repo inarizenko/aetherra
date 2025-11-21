@@ -594,7 +594,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           <div class="tags"><span class="tag">${it.type}</span><span class="tag">${it.rarity}</span><span class="tag">${it.attunement}</span></div>
           <div class="actions">
-            <a href="${it.tools}" title="Ver página de item en 5e.tools"><img src="https://i.imgur.com/Ym2ZJlQ.png"/></a>
+            <a href="${it.tools}" title="Ver página de item en 5e.tools" target="_blank"><img src="https://i.imgur.com/Ym2ZJlQ.png"/></a>
             <button class="btn-ghost" data-id="${it.id}" aria-label="Ver detalles">Detalles</button>
             <button class="btn" data-buy="${it.id}">Añadir</button>
           </div>
