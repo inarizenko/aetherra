@@ -211,6 +211,12 @@ aside h3 {
   place-items: center;
   font-weight: 700;
   flex-shrink:0;
+  & img {
+    height:calc(100% - 10px);
+    aspect-ratio:1;
+    object-fit:cover;
+    object-position:center;
+  }
 }
 
 .name {
@@ -387,5 +393,14 @@ button#modalAdd {
   }
   &[href=""], &[href="undefined"] {
     display:none;
+  }
+}
+
+#modalAvatar {
+  & img {
+    height:calc(100% - 10px);
+    aspect-ratio:1;
+    object-fit:cover;
+    object-position:center;
   }
 }
