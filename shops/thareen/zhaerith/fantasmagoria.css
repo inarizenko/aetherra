@@ -483,7 +483,6 @@ p.lead {
   justify-content: center;
   min-height: 0;
   align-self: stretch;
-  overflow: hidden;
 }
 
 .modal div:has(>div>.desc) {
