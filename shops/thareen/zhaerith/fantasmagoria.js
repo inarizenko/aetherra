@@ -225,11 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function openModal(id) {
     const it = state.items.find((x) => x.id == id);
     if (!it) return;
-    $("#modalAvatar").textContent = it.name
-      .split(" ")
-      .map((w) => w[0])
-      .slice(0, 3)
-      .join("");
+    $("#modalAvatar").innerHTML = `<img src="${it.image}" alt="${it.name}" style="width:100%; height:100%; object-fit:cover; border-radius:8px;"/>`;
     $("#modalType").textContent = `${it.type} • ${it.rarity}`;
     $("#modalName").textContent = it.name;
     $("#modalDesc").textContent = it.desc;
@@ -262,7 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const c = $("#cart");
     const itemsEl = $("#cartItems");
     if (state.cart.length === 0) {
-      itemsEl.innerHTML = '<div class="muted">Your cart is empty</div>';
+      itemsEl.innerHTML = '<div class="muted">Tu carro está vacío</div>';
       $("#cart").style.display = "none";
       return;
     }
@@ -280,10 +276,10 @@ document.addEventListener("DOMContentLoaded", () => {
             it.name
           }</div><div class="muted" style="font-size:12px">${
         it.price
-      } GP each</div></div>
+      } PO each</div></div>
           <div style="text-align:right">${
             it.price * it.qty
-          } GP<br/><button class=\"btn-ghost\" data-remove=\"${
+          } PO<br/><button class=\"btn-ghost\" data-remove=\"${
         it.id
       }\">–</button></div>`;
       itemsEl.appendChild(row);
@@ -295,7 +291,7 @@ document.addEventListener("DOMContentLoaded", () => {
     $("#cartTotal").textContent = `${state.cart.reduce(
       (s, i) => s + i.price * i.qty,
       0
-    )} GP`;
+    )} PO`;
     // remove handlers
     Array.from(itemsEl.querySelectorAll("[data-remove]")).forEach(
       (b) =>
