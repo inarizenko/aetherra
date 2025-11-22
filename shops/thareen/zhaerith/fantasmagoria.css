@@ -36,6 +36,9 @@ body {
   align-items: flex-start;
   justify-content: center;
   padding: 32px;
+  background-size:cover;
+  background-attachment:fixed;
+  background-position:center;
 }
 
 .app {
