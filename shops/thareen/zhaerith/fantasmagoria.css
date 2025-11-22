@@ -491,3 +491,22 @@ p.lead {
   min-height: 0;
   max-height: calc(90dvh - 18px - 18px);
 }
+
+aside h4 {
+  margin-top: 1em;
+  margin-bottom: .25em;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: white;
+}
+
+aside p {
+  margin: 0;
+  font-size: .7rem;
+  line-height: 1.4em;
+  margin-bottom: .3em;
+}
+
+aside p b {
+  color: var(--accent3);
+}
