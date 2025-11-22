@@ -4,11 +4,11 @@
   --bg1: #151515;
   --card: #151515;
   --muted: #707070;
-  --accent: #c79a1b;
-  --accent2: #98740d;
-  --accent3: #9356a0;
-  --accent4: #793687;
-  --accent5: #4f2c57;
+  --accent: #7cefec;
+  --accent2: #3bbdb9;
+  --accent3: #349e6f;
+  --accent4: #30825d;
+  --accent5: #266549;
   --glass: rgba(255, 255, 255, 0.04);
   --radius: 12px;
   --maxw: calc(100dvw - 64px);
