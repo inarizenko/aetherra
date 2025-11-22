@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cristales del Alba — Inventario</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <link href="/aetherra/shops/thareen/zhaerith/cristalesdelalba.css" rel="stylesheet"/>
+
+  <script src="/aetherra/shops/thareen/zhaerith/cristalesdelalba.js"></script>
+  
+</head>
+<body lang="es">
+
+<div class="app">
+  <header>
+    <div class="brand">
+      <div class="logo" aria-hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-darkreader-mode="filter"><path fill="#000" d="m158.6 41 34.5 69.1L239.2 41zm114.2 0 46.1 69.1L353.4 41zM256 48.22 208.8 119h94.4zm-113.9.14L83.22 119h94.18zm227.8 0L334.6 119h94.2zM80.82 137 196.8 311H249l-63.4-174zm124.08 0L256 277.7 307.1 137zm121.5 0L263 311h52.2l116-174zM201 329v46h110v-46zm-67.8 64-53.69 94H432.5l-53.7-94H183zm26.8 46h192v18H160z"/></svg>
+      </div>
+      <div>
+        <h1>Cristales del Alba — Inventario</h1>
+        <p class="lead">Joyería mágica en Zhaerith, Thareen.</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="control">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+          <path d="M21 21l-4.35-4.35" stroke="#cbd5e1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="11" cy="11" r="6" stroke="#cbd5e1" stroke-width="1.6" />
+        </svg>
+        <input id="search" type="search" placeholder="Buscar items, propiedades..." />
+      </div>
+      <div class="control">
+        <label class="muted" for="sort">Clasificar</label>
+        <select id="sort">
+          <option value="name_asc">Nombre A→Z</option>
+          <option value="name_desc">Nombre Z→A</option>
+          <option value="price_asc">Precio ↑</option>
+          <option value="price_desc">Precio ↓</option>
+          <option value="rarity">Rareza</option>
+        </select>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="layout">
+    <aside>
+      <h3>Filtros</h3>
+      <div class="filters">
+        <div>
+          <div class="label">Tipo</div>
+          <div class="chips" id="filterType"></div>
+        </div>
+        <div>
+          <div class="label">Rareza</div>
+          <div class="chips" id="filterRarity"></div>
+        </div>
+        <div>
+          <div class="label">Rango de Precio</div>
+          <input id="priceMin" type="number" placeholder="min PO" style="width:100%; padding:8px; border-radius:8px; background:transparent; border:1px solid rgba(255,255,255,0.03); color:inherit" />
+          <input id="priceMax" type="number" placeholder="max PO" style="width:100%; margin-top:8px; padding:8px; border-radius:8px; background:transparent; border:1px solid rgba(255,255,255,0.03); color:inherit" />
+        </div>
+        <div>
+          <div class="label">Acciones rápidas</div>
+          <div style="display:flex; gap:8px">
+            <button class="chip" id="clearFilters">Borrar Filtros</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <div class="toolbar">
+        <div class="muted">Mostrando <span id="count">0</span> items</div>
+        <div class="muted">Añade los objetos a tu carro para hacer la suma automáticamente del coste final</div>
+      </div>
+
+      <section class="grid" id="grid"></section>
+    </main>
+  </div>
+
+  <!-- cart drawer (simple) -->
+  <div id="cart" class="cart" aria-hidden="true" style="display:none">
+    <header>
+      <div style="font-weight:800">Carro</div>
+      <div style="margin-left:auto" id="cartCount">0 items</div>
+    </header>
+    <div class="items" id="cartItems">
+      <div class="muted">Sin items</div>
+    </div>
+    <div class="foot">
+      <div class="muted">Total: <strong id="cartTotal">0 PO</strong></div>
+    </div>
+  </div>
+
+  <!-- modal -->
+  <div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-hidden="true">
+    <div class="modal" role="document" id="modal">
+      <div style="display:flex; gap:12px; align-items:flex-start">
+        <div style="width:120px; height:120px; border-radius:10px; background:linear-gradient(135deg,var(--accent),var(--accent5)); display:grid; place-items:center; font-weight:800" id="modalAvatar">+8</div>
+        <div style="flex:1">
+          <div class="kicker" id="modalType">Arma • Raro</div>
+          <h2 id="modalName" style="margin:6px 0 6px">Nombre del Item</h2>
+          <p class="desc" id="modalDesc">Descripción</p>
+          <div style="margin-top:10px; display:flex; gap:8px; align-items:center;align-self:stretch;">
+            <div style="font-weight:800" id="modalPrice">25 PO</div>
+            <div style="margin-left:auto"><button class="btn" id="modalAdd">Añadir al carro</button><a href="" title="Ver página de item en 5e.tools" target="_blank"><img src="https://i.imgur.com/Ym2ZJlQ.png"/></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
