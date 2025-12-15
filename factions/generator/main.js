@@ -2,72 +2,72 @@ $(function(){
 
 const types = {
 major: {
-population:'2525 (10d100*5)'
+population:'2525 (10d100*5)',
 initialTreasure:'ERROR: ESTE TIPO DE FACCIÓN NO SE PUEDE CREAR DE FORMA INICIAL',
 minorsPerc:15,
 adultsPerc:70,
 eldersPerc:15,
-taxBase:7
+taxBase:7,
 productionPoints:15,
 initialLoyalty:60,
 initialMoral:60,
 initialAuthority:70
 },
 minor: {
-population:'505 (2d100*5)'
+population:'505 (2d100*5)',
 initialTreasure:'trigger minorTypes',
 minorsPerc:15,
 adultsPerc:70,
 eldersPerc:15,
-taxBase:5
+taxBase:5,
 productionPoints:10,
 initialLoyalty:70,
 initialMoral:55,
 initialAuthority:60
 },
 minorGov: {
-population:'trigger minorGovSize'
+population:'trigger minorGovSize',
 initialTreasure:'trigger minorGovTypes',
 minorsPerc:15,
 adultsPerc:70,
 eldersPerc:15,
-taxBase:6
+taxBase:6,
 productionPoints:12,
 initialLoyalty:60,
 initialMoral:65,
 initialAuthority:65
 },
 guild: {
-population:'triggerGuildSize'
+population:'triggerGuildSize',
 initialTreasure:150,
 minorsPerc:0,
 adultsPerc:85,
 eldersPerc:15,
-taxBase:3
+taxBase:3,
 productionPoints:7,
 initialLoyalty:70,
 initialMoral:75,
 initialAuthority:50
 },
 group: {
-population:'201 (2d100*2)'
+population:'201 (2d100*2)',
 initialTreasure:100,
 minorsPerc:15,
 adultsPerc:70,
 eldersPerc:15,
-taxBase:2
+taxBase:2,
 productionPoints:5,
 initialLoyalty:50,
 initialMoral:80,
 initialAuthority:50
 },
 groupBase: {
-population:'404 (4d100*2)'
+population:'404 (4d100*2)',
 initialTreasure:150,
 minorsPerc:15,
 adultsPerc:70,
 eldersPerc:15,
-taxBase:3
+taxBase:3,
 productionPoints:7,
 initialLoyalty:60,
 initialMoral:50,
