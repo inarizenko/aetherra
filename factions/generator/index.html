@@ -17,9 +17,35 @@
 <b>Nombre</b>
 <i contenteditable>Nombre</i>
 </span>
+<span id="creator">
+<b>Jugador que la creó</b>
+<i contenteditable placeholder="Nombre"></i>
+</span>
+</div>
+</header>
+<barras>
+<span id="loyalty">
+<b>Lealtad</b>
+<i>N/A</i>
+</span>
+<span id="morality">
+<b>Moralidad</b>
+<i>N/A</i>
+</span>
+<span id="authority">
+<b>Autoridad</b>
+<i>N/A</i>
+</span>
+<span id="stability">
+<b>Estabilidad</b>
+<i>N/A</i>
+</span>
+</barras>
+<main>
+<side>
 <span id="type">
 <b>Tipo</b>
-<select>
+<select class="noprint">
 <option value="major">Casa mayor</option>
 <option value="minor">Casa menor</option>
 <option value="minorgov">Casa menor gobernante</option>
@@ -33,6 +59,7 @@
 <option value="group">Agrupación espiritual con pueblo</option>
 <option value="group">Agrupación espiritual con ciudad</option>
 </select>
+<i class="nopc"></i>
 </span>
 <span id="leader">
 <b>Gobernante(s)</b>
@@ -46,15 +73,10 @@
 <b>Población</b>
 <i contenteditable>Revisa las normas en la página de facciones si tienes dudas.</i>
 </span>
-<span id="stability">
-<b>Estabilidad</b>
-<i>N/A</i>
-</span>
-</div>
-</header>
-<main>
-Content.
+</side>
+<content>
+Content
+</content>
 </main>
-
 </body>
 </html>
