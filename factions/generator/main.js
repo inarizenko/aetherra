@@ -221,6 +221,17 @@ $form.find('#population .populationelders i').text(elders);
 }
 });
 
+let typingTimer;
+const doneDelay = 500;
+
+$('#populationtotal i').on('input', function () {
+var $form = $(this).parents('body');
+clearTimeout(typingTimer);
+typingTimer = setTimeout(() => {
+$form.find('#population .populationtotal i').text($(this).text());
+}, doneDelay);
+});
+
 $('#typeExtra select').on('change', function(){
 let value = $(this).find(':selected').val();
 let claseName = $(this).closest('#typeExtra').attr('class');
