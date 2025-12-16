@@ -176,7 +176,7 @@ let value = $(this).find(':selected').val();
 let claseName = $(this).parents('#typeExtra').attr('class');
 let clase = window[claseName];
 var $form = $(this).parents('body');
-console.log(clase+'/'+value);
+console.log(claseName+'/'+clase+'/'+value);
 if (clase[value]) {
 console.log('first if');
 if ($(this).is('[data-type="population"]')) {
