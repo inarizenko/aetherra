@@ -186,7 +186,7 @@ console.log(claseName + '/' + source + '/' + value);
 
 if (source && source[value]) {
 console.log('first if');
-if ($(this).is('[data-type="population"]')) {
+if ($(this).closest('#typeExtra').is('[data-type="population"]')) {
 console.log('second if');
 $form.find('#populationtotal i').text(clase[value].population);
 }
