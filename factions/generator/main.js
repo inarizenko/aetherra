@@ -38,7 +38,7 @@ initialMoral:65,
 initialAuthority:65
 },
 guild: {
-population:'triggerGuildSize',
+population:'trigger GuildSize',
 initialTreasure:150,
 minorsPerc:0,
 adultsPerc:85,
