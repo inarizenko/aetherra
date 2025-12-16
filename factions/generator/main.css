@@ -1,7 +1,16 @@
+:root {
+color-scheme:dark;
+}
+
+html, body {
+  display:none;
+}
+
 page {
   display:block;
   page-break-after: always;
   break-after: page;
+  box-sizing:border-box;
 }
 
 @media screen {
@@ -12,9 +21,15 @@ page {
 
 @page {
   size: landscape;
-  margin: 0;
+  margin:0;
 }
 @media print {
+  :root {
+  color-scheme:light;
+  }
+  page {
+    padding: 2cm;
+  }
   .noprint {
      display:none;
   }
