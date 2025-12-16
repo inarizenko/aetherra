@@ -1,3 +1,9 @@
+@media screen {
+  .nopc {
+    display: none;
+  }
+}
+
 @media print {
   .noprint {
      display:none;
