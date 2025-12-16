@@ -182,9 +182,9 @@ var valueClean = parseInt(types[value].population.split(' (')[0]);
 } else {
 var valueClean = parseInt($form.find('#populationtotal i').text());
 }
-var percMinors = types[value].minorsPerc / -100;
-var percAdults = types[value].adultsPerc / -100;
-var percElders = types[value].eldersPerc / -100;
+var percMinors = types[value].minorsPerc / 100;
+var percAdults = types[value].adultsPerc / 100;
+var percElders = types[value].eldersPerc / 100;
 $form.find('#population .populationminors i').text(valueClean * percMinors);
 $form.find('#population .populationadults i').text(valueClean * percAdults);
 $form.find('#population .populationelders i').text(valueClean * percElders);
