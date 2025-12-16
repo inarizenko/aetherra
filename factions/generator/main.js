@@ -188,7 +188,7 @@ if (source && source[value]) {
 console.log('first if');
 if ($(this).closest('#typeExtra').is('[data-type="population"]')) {
 console.log('second if');
-$form.find('#populationtotal i').text(clase[value].population);
+$form.find('#populationtotal i').text(source[value].population);
 }
 }
 });
