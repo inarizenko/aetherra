@@ -178,7 +178,7 @@ $form.find('#typeExtra').hide();
 $form.find('#populationtotal i').text(types[value].population);
 $form.find('#population .populationtotal i').text(types[value].population);
 if (types[value].population.includes('d100')) {
-var valueClean = parseInt(types[value].population.split(' (')[0];
+var valueClean = parseInt(types[value].population.split(' (')[0]);
 } else {
 var valueClean = parseInt($form.find('#populationtotal i').text());
 }
