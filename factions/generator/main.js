@@ -153,7 +153,12 @@ population:'A discutir, entre 1d100+10 / 3d100 dependiendo del tipo.'
 }
 }
 
-
+const typeSources = {
+  minorGovSize,
+  guildSize,
+  minorTypes,
+  minorGovTypes
+};
 
 $('#type select').on('change', function(){
 let value = $(this).find(':selected').val();
@@ -173,11 +178,13 @@ $form.find('#populationtotal i').text(types[value].population);
 
 $('#typeExtra select').on('change', function(){
 let value = $(this).find(':selected').val();
-let claseName = $(this).parents('#typeExtra').attr('class');
-let clase = window[claseName];
+let claseName = $(this).closest('#typeExtra').attr('class');
+let source = typeSources[claseName];
 var $form = $(this).parents('body');
-console.log(claseName+'/'+clase+'/'+value);
-if (clase[value]) {
+
+console.log(claseName + '/' + source + '/' + value);
+
+if (source && source[value]) {
 console.log('first if');
 if ($(this).is('[data-type="population"]')) {
 console.log('second if');
