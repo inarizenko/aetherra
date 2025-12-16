@@ -228,7 +228,54 @@ $('#populationtotal i').on('input', function () {
 var $form = $(this).parents('body');
 clearTimeout(typingTimer);
 typingTimer = setTimeout(() => {
+
 $form.find('#population .populationtotal i').text($(this).text());
+
+if ($(this).text().includes('d100')) {
+var valueClean = parseInt($(this).text().split(' (')[0]);
+} else {
+var valueClean = parseInt($(this).text());
+}
+
+var percMinorsRaw = parseInt($form.find('.populationminors i').data('perc'));
+var percAdultsRaw = parseInt($form.find('.populationadults i').data('perc'));
+var percEldersRaw = parseInt($form.find('.populationelders i').data('perc'));
+
+
+var percMinors = percMinorsRaw / 100;
+var percAdults = percAdultsRaw / 100;
+var percElders = percEldersRaw / 100;
+
+var cleanMinors = valueClean * percMinors;
+var cleanAdults = valueClean * percAdults;
+var cleanElders = valueClean * percElders;
+
+var minors = Math.floor(cleanMinors);
+var adults = Math.floor(cleanAdults);
+var elders = Math.floor(cleanElders);
+
+var totalRounded = minors + adults + elders;
+var diff = valueClean - totalRounded;
+
+var fractions = [
+    { name: 'minors', value: cleanMinors - minors },
+    { name: 'adults', value: cleanAdults - adults },
+    { name: 'elders', value: cleanElders - elders }
+];
+
+fractions.sort((a, b) => b.value - a.value);
+
+// distribute the remaining difference
+for (var i = 0; i < diff; i++) {
+    if (fractions[i % 3].name === 'minors') minors++;
+    else if (fractions[i % 3].name === 'adults') adults++;
+    else if (fractions[i % 3].name === 'elders') elders++;
+}
+
+$form.find('#population .populationminors i').text(minors);
+$form.find('#population .populationadults i').text(adults);
+$form.find('#population .populationelders i').text(elders);
+
 }, doneDelay);
 });
 
