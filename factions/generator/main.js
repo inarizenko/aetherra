@@ -213,9 +213,9 @@ for (var i = 0; i < diff; i++) {
     else if (fractions[i % 3].name === 'elders') elders++;
 }
 
-$form.find('#population .populationminors i').text(minors);
-$form.find('#population .populationadults i').text(adults);
-$form.find('#population .populationelders i').text(elders);
+$form.find('#population .populationminors i').attr('data-perc', percMinors).text(minors);
+$form.find('#population .populationadults i').attr('data-perc', percAdults).text(adults);
+$form.find('#population .populationelders i').attr('data-perc', percElders).text(elders);
 }
 
 }
