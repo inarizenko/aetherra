@@ -237,9 +237,9 @@ var valueClean = parseInt($(this).text().split(' (')[0]);
 var valueClean = parseInt($(this).text());
 }
 
-var percMinors = parseInt($form.find('.populationminors i').data('perc'));
-var percAdults = parseInt($form.find('.populationadults i').data('perc'));
-var percElders = parseInt($form.find('.populationelders i').data('perc'));
+var percMinors = parseFloat($form.find('.populationminors i').data('perc'));
+var percAdults = parseFloat($form.find('.populationadults i').data('perc'));
+var percElders = parseFloat($form.find('.populationelders i').data('perc'));
 
 var cleanMinors = valueClean * percMinors;
 var cleanAdults = valueClean * percAdults;
