@@ -1,5 +1,7 @@
 page {
   display:block;
+  page-break-after: always;
+  break-after: page;
 }
 
 @media screen {
@@ -9,7 +11,7 @@ page {
 }
 
 @page {
-  size: A4;
+  size: a4 landscape;
   margin: 0;
 }
 @media print {
@@ -17,7 +19,7 @@ page {
      display:none;
   }
   html, body, page {
-    width: 210mm;
-    height: 297mm;
+    width: 297mm;
+    height: 210mm;
   }
 }
