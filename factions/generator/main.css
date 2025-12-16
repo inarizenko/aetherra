@@ -11,7 +11,7 @@ page {
 }
 
 @page {
-  size: a4 landscape;
+  size: landscape;
   margin: 0;
 }
 @media print {
