@@ -163,7 +163,11 @@ const typeSources = {
 $('#type select').on('change', function(){
 let value = $(this).find(':selected').val();
 var $form = $(this).parents('body');
+
+$(this).closest('#type').find('i.nopc').text(value);
+
 if (types[value]) {
+
 if (types[value].population.includes('trigger')) {
 var triggered = types[value].population.split('trigger ')[1];
 $form.find('#populationtotal i').text('Esperando selección extra de tipo');
@@ -173,6 +177,7 @@ $form.find('#typeExtra.'+triggered).show();
 $form.find('#typeExtra').hide();
 $form.find('#populationtotal i').text(types[value].population);
 }
+
 }
 });
 
@@ -181,15 +186,14 @@ let value = $(this).find(':selected').val();
 let claseName = $(this).closest('#typeExtra').attr('class');
 let source = typeSources[claseName];
 var $form = $(this).parents('body');
-
-console.log(claseName + '/' + source + '/' + value);
+$(this).closest('#typeExtra').find('i.nopc').text(value);
 
 if (source && source[value]) {
-console.log('first if');
+
 if ($(this).closest('#typeExtra').is('[data-type="population"]')) {
-console.log('second if');
 $form.find('#populationtotal i').text(source[value].population);
 }
+
 }
 });
 
