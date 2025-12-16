@@ -237,14 +237,9 @@ var valueClean = parseInt($(this).text().split(' (')[0]);
 var valueClean = parseInt($(this).text());
 }
 
-var percMinorsRaw = parseInt($form.find('.populationminors i').data('perc'));
-var percAdultsRaw = parseInt($form.find('.populationadults i').data('perc'));
-var percEldersRaw = parseInt($form.find('.populationelders i').data('perc'));
-
-
-var percMinors = percMinorsRaw / 100;
-var percAdults = percAdultsRaw / 100;
-var percElders = percEldersRaw / 100;
+var percMinors = parseInt($form.find('.populationminors i').data('perc'));
+var percAdults = parseInt($form.find('.populationadults i').data('perc'));
+var percElders = parseInt($form.find('.populationelders i').data('perc'));
 
 var cleanMinors = valueClean * percMinors;
 var cleanAdults = valueClean * percAdults;
