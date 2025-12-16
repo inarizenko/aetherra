@@ -155,7 +155,7 @@ population:'A discutir, entre 1d100+10 / 3d100 dependiendo del tipo.'
 
 
 
-$('#type').on('change', function(){
+$('#type select').on('change', function(){
 let value = $(this).find(':selected').val();
 var $form = $(this).parents('body');
 if (types[value]) {
@@ -171,7 +171,7 @@ $form.find('#populationtotal i').text(types[value].population);
 }
 });
 
-$('#typeExtra').on('change', function(){
+$('#typeExtra select').on('change', function(){
 let value = $(this).find(':selected').val();
 let clase = $(this).attr('class');
 var $form = $(this).parents('body');
