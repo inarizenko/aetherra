@@ -182,12 +182,40 @@ var valueClean = parseInt(types[value].population.split(' (')[0]);
 } else {
 var valueClean = parseInt($form.find('#populationtotal i').text());
 }
+
 var percMinors = types[value].minorsPerc / 100;
 var percAdults = types[value].adultsPerc / 100;
 var percElders = types[value].eldersPerc / 100;
-$form.find('#population .populationminors i').text(valueClean * percMinors);
-$form.find('#population .populationadults i').text(valueClean * percAdults);
-$form.find('#population .populationelders i').text(valueClean * percElders);
+
+var cleanMinors = valueClean * percMinors;
+var cleanAdults = valueClean * percAdults;
+var cleanElders = valueClean * percElders;
+
+var minors = Math.floor(cleanMinors);
+var adults = Math.floor(cleanAdults);
+var elders = Math.floor(cleanElders);
+
+var totalRounded = minors + adults + elders;
+var diff = valueClean - totalRounded;
+
+var fractions = [
+    { name: 'minors', value: cleanMinors - minors },
+    { name: 'adults', value: cleanAdults - adults },
+    { name: 'elders', value: cleanElders - elders }
+];
+
+fractions.sort((a, b) => b.value - a.value);
+
+// distribute the remaining difference
+for (var i = 0; i < diff; i++) {
+    if (fractions[i % 3].name === 'minors') minors++;
+    else if (fractions[i % 3].name === 'adults') adults++;
+    else if (fractions[i % 3].name === 'elders') elders++;
+}
+
+$form.find('#population .populationminors i').text(minors);
+$form.find('#population .populationadults i').text(adults);
+$form.find('#population .populationelders i').text(elders);
 }
 
 }
