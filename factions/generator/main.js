@@ -164,7 +164,6 @@ var triggered = types[value].population.split('trigger ')[1];
 $form.find('#populationtotal i').text('Esperando selección extra de tipo');
 $form.find('#typeExtra').hide();
 $form.find('#typeExtra.'+triggered).show();
-console.log('#typeExtra.'+triggered);
 } else {
 $form.find('#typeExtra').hide();
 $form.find('#populationtotal i').text(types[value].population);
@@ -176,8 +175,11 @@ $('#typeExtra').on('change', function(){
 let value = $(this).find(':selected').val();
 let clase = $(this).attr('class');
 var $form = $(this).parents('body');
+console.log(clase+'/'+value);
 if (clase[value]) {
+console.log('first if');
 if ($(this).is('[data-type="population"]')) {
+console.log('second if');
 $form.find('#populationtotal i').text(clase[value].population);
 }
 }
