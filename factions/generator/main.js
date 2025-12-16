@@ -172,4 +172,15 @@ $form.find('#populationtotal i').text(types[value].population);
 }
 });
 
+$('#typeExtra').on('change', function(){
+let value = $(this).find(':selected').val();
+let clase = $(this).attr('class');
+var $form = $(this).parents('body');
+if (clase[value]) {
+if ($(this).is('[data-type="population"]')) {
+$form.find('#populationtotal i').text(clase[value].population);
+}
+}
+});
+
 });
