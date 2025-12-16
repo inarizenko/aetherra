@@ -164,7 +164,7 @@ $('#type select').on('change', function(){
 let value = $(this).find(':selected').val();
 var $form = $(this).parents('body');
 
-$(this).closest('#type').find('i.nopc').text(value);
+$(this).closest('#type').find('i.nopc').text($(this).find(':selected').text());
 
 if (types[value]) {
 
@@ -186,7 +186,7 @@ let value = $(this).find(':selected').val();
 let claseName = $(this).closest('#typeExtra').attr('class');
 let source = typeSources[claseName];
 var $form = $(this).parents('body');
-$(this).closest('#typeExtra').find('i.nopc').text(value);
+$(this).closest('#typeExtra').find('i.nopc').text($(this).find(':selected').text());
 
 if (source && source[value]) {
 
