@@ -153,4 +153,23 @@ population:'A discutir, entre 1d100+10 / 3d100 dependiendo del tipo.'
 }
 }
 
+
+
+$('#type').on('change', function(){
+let value = $(this).find(':selected').val();
+var $form = $(this).parents('body');
+if (types[value]) {
+if (types[value].population.includes('trigger')) {
+var triggered = types[value].population.split('trigger ')[1];
+$form.find('#populationtotal i').text('Esperando selección extra de tipo');
+$form.find('#typeExtra').hide();
+$form.find('#typeExtra.'+triggered).show();
+console.log('#typeExtra.'+triggered);
+} else {
+$form.find('#typeExtra').hide();
+$form.find('#populationtotal i').text(types[value].population);
+}
+}
+});
+
 });
