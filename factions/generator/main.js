@@ -173,7 +173,7 @@ $form.find('#populationtotal i').text(types[value].population);
 
 $('#typeExtra select').on('change', function(){
 let value = $(this).find(':selected').val();
-let clase = $(this).attr('class');
+let clase = $(this).parents('#typeExtra').attr('class');
 var $form = $(this).parents('body');
 console.log(clase+'/'+value);
 if (clase[value]) {
