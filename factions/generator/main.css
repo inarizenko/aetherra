@@ -49,6 +49,7 @@ page#firstpage {
       outline:1px solid var(--br);
       outline-offset:.5rem;
       margin:.5rem;
+      background:var(--t1);
     }
     & #info {
       flex:1;
