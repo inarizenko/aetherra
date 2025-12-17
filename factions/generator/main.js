@@ -209,7 +209,7 @@ var stability = (types[value].initialLoyalty + types[value].initialMoral + types
 $form.find('#loyalty').attr('style','--value:'+types[value].initialLoyalty+'%;');
 $form.find('#morality').attr('style','--value:'+types[value].initialMoral+'%;');
 $form.find('#authority').attr('style','--value:'+types[value].initialAuthority+'%;');
-$form.find('#stability').attr('style','--value:'+types[value].stability+'%;');
+$form.find('#stability').attr('style','--value:'+stability+'%;');
 
 // POPULATION
 
