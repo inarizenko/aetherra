@@ -125,7 +125,7 @@ page#firstpage {
         top:1em;
         background:var(--t1);
         z-index:-1;
-        width:calc((var(--value) * 1%) + ((var(--value) / 10) * .75px));
+        width:calc((var(--value) * 1%) + ((var(--value) / 10) * .9px));
       }
     }
   }
