@@ -204,10 +204,10 @@ hasUnsavedChanges = true;
 
 // BARS
 
-var stability = (types[value].initialLoyalty + types[value].initialMorality + types[value].initialAuthority) / 3;
+var stability = (types[value].initialLoyalty + types[value].initialMoral + types[value].initialAuthority) / 3;
 
 $form.find('#loyalty').attr('style','--value:'+types[value].initialLoyalty+'%;');
-$form.find('#morality').attr('style','--value:'+types[value].initialMorality+'%;');
+$form.find('#morality').attr('style','--value:'+types[value].initialMoral+'%;');
 $form.find('#authority').attr('style','--value:'+types[value].initialAuthority+'%;');
 $form.find('#stability').attr('style','--value:'+types[value].stability+'%;');
 
