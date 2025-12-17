@@ -201,6 +201,18 @@ $(this).closest('#type').find('i.nopc').text($(this).find(':selected').text());
 
 if (types[value]) {
 hasUnsavedChanges = true;
+
+// BARS
+
+var stability = (types[value].initialLoyalty + types[value].initialMorality + types[value].initialAuthority) / 3;
+
+$form.find('#loyalty').attr('style','--value:'+types[value].initialLoyalty+'%;');
+$form.find('#morality').attr('style','--value:'+types[value].initialMorality+'%;');
+$form.find('#authority').attr('style','--value:'+types[value].initialAuthority+'%;');
+$form.find('#stability').attr('style','--value:'+types[value].stability+'%;');
+
+// POPULATION
+
 if (types[value].population.includes('trigger')) {
 var triggered = types[value].population.split('trigger ')[1];
 $form.find('#populationtotal i').text('Esperando selección extra de tipo');
