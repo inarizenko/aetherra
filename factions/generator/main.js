@@ -207,9 +207,9 @@ hasUnsavedChanges = true;
 var stability = (types[value].initialLoyalty + types[value].initialMoral + types[value].initialAuthority) / 3;
 
 $form.find('#loyalty').attr('style','--value:'+types[value].initialLoyalty+';').find('i').text(types[value].initialLoyalty);
-$form.find('#morality').attr('style','--value:'+types[value].initialMoral+';').text(types[value].initialMoral);
-$form.find('#authority').attr('style','--value:'+types[value].initialAuthority+';').text(types[value].initialAuthority);
-$form.find('#stability').attr('style','--value:'+stability+';').text(stability);
+$form.find('#morality').attr('style','--value:'+types[value].initialMoral+';').find('i').text(types[value].initialMoral);
+$form.find('#authority').attr('style','--value:'+types[value].initialAuthority+';').find('i').text(types[value].initialAuthority);
+$form.find('#stability').attr('style','--value:'+stability+';').find('i').text(stability);
 
 // POPULATION
 
