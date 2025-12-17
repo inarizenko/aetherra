@@ -160,6 +160,36 @@ const typeSources = {
   minorGovTypes
 };
 
+// LOGO INPUT
+
+$('#logo').on('click', function () {
+  $('#logoInput').click();
+});
+
+$('#logoInput').on('change', function () {
+  const file = this.files[0];
+  if (!file) return;
+
+  if (!file.type.startsWith('image/')) return;
+
+  const reader = new FileReader();
+
+  reader.onload = function (e) {
+    $('#logo')
+      .empty()
+      .css({
+        'background-image': `url(${e.target.result})`,
+        'background-size': 'contain',
+        'background-repeat': 'no-repeat',
+        'background-position': 'center'
+      });
+  };
+
+  reader.readAsDataURL(file);
+});
+
+// TYPE INFO
+
 $('#type select').on('change', function(){
 let value = $(this).find(':selected').val();
 var $form = $(this).parents('body');
@@ -221,6 +251,8 @@ $form.find('#population .populationelders i').attr('data-perc', percElders).text
 }
 });
 
+// POPULATION INFO UPDATE IF CUSTOM
+
 let typingTimer;
 const doneDelay = 500;
 
@@ -273,6 +305,8 @@ $form.find('#population .populationelders i').text(elders);
 
 }, doneDelay);
 });
+
+// CORRECTION OF INFO IF SUBTYPE IS SPECIAL
 
 $('#typeExtra select').on('change', function(){
 let value = $(this).find(':selected').val();
