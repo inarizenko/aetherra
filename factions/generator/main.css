@@ -1,5 +1,19 @@
 :root {
 color-scheme:dark;
+  --br: white;
+  --w:white;
+  --w2:#aaa;
+  --t1:#333;
+}
+
+[contenteditable] {
+  outline:0!important;
+  &:focus {
+    background:var(--t1);
+    padding:.2em;
+    z-index:6;
+    position:Relative;
+  }
 }
 
 html, body {
@@ -13,9 +27,115 @@ page {
   box-sizing:border-box;
 }
 
+page#firstpage {
+  display:grid;
+  grid-template-columns:100%;
+  grid-template-rows:max-content max-content 1fr;
+  gap:1px;
+  padding:2rem;
+  & > * {
+    outline:1px solid var(--br);
+  }
+  & header {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:1rem;
+    gap:2rem;
+    & #logo {
+      width:4rem;
+      flex-shrink:0;
+      aspect-ratio:1;
+      outline:1px solid var(--br);
+      outline-offset:1rem;
+      margin:1rem;
+    }
+    & #info {
+      flex:1;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      flex-direction:column;
+      & #name {
+        font:1.5rem Abril Fatface;
+        line-height:1;
+        text-decoration:underline 1px var(--w2);
+        color:var(--w);
+        padding-right:1em;
+        & b {
+          display:none;
+        }
+        & i {
+          font:inherit;
+        }
+      }
+      & #creator {
+        font:900 .5rem 'arial';
+        text-transform:uppercase;
+        & b::after {
+          content:': ';
+        }
+        & i {
+          font:inherit;
+          text-decoration:underline 1px var(--w2);
+        }
+      }
+    }
+  }
+  & barras {
+    display:flex;
+    justify-content:center;
+    padding:1em;
+    gap:1em;
+    flex-wrap:wrap;
+    & > span {
+      position:relative;
+      flex:32%;
+      flex-grow:1;
+      height:1.5rem;
+      padding-top:1rem;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      &#stability {
+        width:100%;
+      }
+      & b, & i {
+        position:relative;
+        top:-1.25rem;
+        font:900 .6rem 'arial';
+        text-transform:uppercase;
+      }
+      & i {
+        margin-left:auto;
+      }
+      &::before {
+        content:'';
+        position:absolute;
+        inset:0;
+        top:1em;
+        border:1px solid var(--br);
+        background:repeating-linear-gradient(90deg, transparent 0 10%, white 10% calc(10% + 1px));
+      }
+      &::after {
+        content:'';
+        position:absolute;
+        inset:0;
+        top:1em;
+        background:var(--t1);
+        z-index:-1;
+        width:calc((var(--value) * 1%) + ((var(--value) / 10) * .75px));
+      }
+    }
+  }
+}
+
 @media screen {
   .nopc {
     display: none;
+  }
+  page {
+    height:100dvh;
   }
 }
 
@@ -26,6 +146,10 @@ page {
 @media print {
   :root {
   color-scheme:light;
+  --br: black;
+  --w:black;
+  --w2:#444;
+  --t1:#ccc;
   }
   page {
     padding: 2cm;
