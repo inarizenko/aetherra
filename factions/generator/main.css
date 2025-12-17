@@ -9,6 +9,7 @@ color-scheme:dark;
 [contenteditable] {
   outline:0!important;
   text-decoration:underline 1px var(--w2);
+  cursor:pointer;
   &:focus {
     background:var(--t1);
     padding:.2em;
@@ -52,6 +53,7 @@ page#firstpage {
       outline-offset:.5rem;
       margin:.5rem;
       background:var(--t1);
+      cursor:pointer;
     }
     & #info {
       flex:1;
