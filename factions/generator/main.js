@@ -1,5 +1,7 @@
 $(function(){
 
+let hasUnsavedChanges = false;
+
 const types = {
 major: {
 population:'2525 (10d100*5)',
@@ -327,8 +329,6 @@ $form.find('#populationtotal i').text(source[value].population);
 });
 
 // PREVENT INFO LOSS
-
-let hasUnsavedChanges = false;
 
 $('input, textarea, select').on('input change', function () {
   hasUnsavedChanges = true;
