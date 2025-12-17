@@ -40,7 +40,7 @@ initialMoral:65,
 initialAuthority:65
 },
 guild: {
-population:'trigger GuildSize',
+population:'trigger guildSize',
 initialTreasure:150,
 minorsPerc:0,
 adultsPerc:85,
@@ -216,10 +216,10 @@ $form.find('#stability').attr('style','--value:'+stability+';').find('i').text(s
 if (types[value].population.includes('trigger')) {
 var triggered = types[value].population.split('trigger ')[1];
 $form.find('#populationtotal i').text('Esperando selección extra de tipo');
-$form.find('#typeExtra').hide();
-$form.find('#typeExtra.'+triggered).show();
+$form.find('.typeExtra').hide();
+$form.find('.typeExtra#'+triggered).show();
 } else {
-$form.find('#typeExtra').hide();
+$form.find('.typeExtra').hide();
 $form.find('#populationtotal i').text(types[value].population);
 $form.find('#population .populationtotal i').text(types[value].population);
 if (types[value].population.includes('d100')) {
@@ -324,16 +324,16 @@ $form.find('#population .populationelders i').text(elders);
 
 // CORRECTION OF INFO IF SUBTYPE IS SPECIAL
 
-$('#typeExtra select').on('change', function(){
+$('.typeExtra select').on('change', function(){
 let value = $(this).find(':selected').val();
-let claseName = $(this).closest('#typeExtra').attr('class');
+let claseName = $(this).closest('.typeExtra').attr('id');
 let source = typeSources[claseName];
 var $form = $(this).parents('body');
-$(this).closest('#typeExtra').find('i.nopc').text($(this).find(':selected').text());
+$(this).closest('.typeExtra').find('i.nopc').text($(this).find(':selected').text());
 
 if (source && source[value]) {
 hasUnsavedChanges = true;
-if ($(this).closest('#typeExtra').is('[data-type="population"]')) {
+if ($(this).closest('.typeExtra').is('[data-type="population"]')) {
 $form.find('#populationtotal i').text(source[value].population);
 }
 
