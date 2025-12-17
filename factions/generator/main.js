@@ -186,6 +186,7 @@ $('#logoInput').on('change', function () {
   };
 
   reader.readAsDataURL(file);
+  hasUnsavedChanges = true;
 });
 
 // TYPE INFO
@@ -197,7 +198,7 @@ var $form = $(this).parents('body');
 $(this).closest('#type').find('i.nopc').text($(this).find(':selected').text());
 
 if (types[value]) {
-
+hasUnsavedChanges = true;
 if (types[value].population.includes('trigger')) {
 var triggered = types[value].population.split('trigger ')[1];
 $form.find('#populationtotal i').text('Esperando selección extra de tipo');
@@ -258,6 +259,7 @@ const doneDelay = 500;
 
 $('#populationtotal i').on('input', function () {
 var $form = $(this).parents('body');
+hasUnsavedChanges = true;
 clearTimeout(typingTimer);
 typingTimer = setTimeout(() => {
 
@@ -316,12 +318,27 @@ var $form = $(this).parents('body');
 $(this).closest('#typeExtra').find('i.nopc').text($(this).find(':selected').text());
 
 if (source && source[value]) {
-
+hasUnsavedChanges = true;
 if ($(this).closest('#typeExtra').is('[data-type="population"]')) {
 $form.find('#populationtotal i').text(source[value].population);
 }
 
 }
+});
+
+// PREVENT INFO LOSS
+
+let hasUnsavedChanges = false;
+
+$('input, textarea, select').on('input change', function () {
+  hasUnsavedChanges = true;
+});
+
+window.addEventListener('beforeunload', function (e) {
+  if (!hasUnsavedChanges) return;
+
+  e.preventDefault();
+  e.returnValue = '';
 });
 
 });
