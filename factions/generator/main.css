@@ -8,11 +8,13 @@ color-scheme:dark;
 
 [contenteditable] {
   outline:0!important;
+  text-decoration:underline 1px var(--w2);
   &:focus {
     background:var(--t1);
     padding:.2em;
     z-index:6;
     position:Relative;
+    text-decoration:none;
   }
 }
 
@@ -60,7 +62,6 @@ page#firstpage {
       & #name {
         font:1.5rem Abril Fatface;
         line-height:1;
-        text-decoration:underline 1px var(--w2);
         color:var(--w);
         padding-right:1em;
         & b {
@@ -78,7 +79,6 @@ page#firstpage {
         }
         & i {
           font:inherit;
-          text-decoration:underline 1px var(--w2);
         }
       }
     }
@@ -161,5 +161,8 @@ page#firstpage {
   html, body, page {
     width: 297mm;
     height: 210mm;
+  }
+  [contenteditable] {
+    text-decoration:none;
   }
 }
