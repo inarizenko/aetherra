@@ -43,12 +43,12 @@ page#firstpage {
     padding:1rem;
     gap:2rem;
     & #logo {
-      width:4rem;
+      width:5rem;
       flex-shrink:0;
       aspect-ratio:1;
       outline:1px solid var(--br);
-      outline-offset:1rem;
-      margin:1rem;
+      outline-offset:.5rem;
+      margin:.5rem;
     }
     & #info {
       flex:1;
